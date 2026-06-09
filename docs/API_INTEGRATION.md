@@ -1,7 +1,9 @@
-# FastAPI Integration
+# API Integration (Flask / REST)
 
-The dashboard ships with deterministic mock data. Wiring the real FastAPI
-backend touches **exactly two files** and **zero UI components**.
+The dashboard ships with deterministic mock data. The data layer is
+**backend-agnostic** — it depends only on the `PipelineDataSource` interface, so
+wiring the existing **Flask** API (or any HTTP service) touches **two files** and
+**zero UI components**.
 
 ## TL;DR
 
@@ -10,19 +12,21 @@ cp .env.example .env.local
 # .env.local
 PIPELINE_DATA_SOURCE=api
 PIPELINE_API_BASE_URL=https://pipeline-api.internal
+PIPELINE_API_RUNS_PATH=/runs
 PIPELINE_API_TOKEN=<server-side token>
 PIPELINE_API_DAYS=20
 ```
 
-That's it — `lib/pipeline/data-source.ts` will select
-`ApiPipelineDataSource` and the UI renders live data.
+That's it — `lib/pipeline/data-source.ts` selects `ApiPipelineDataSource` and the
+UI renders live data.
 
 ## Where the integration lives
 
 | Concern | File |
 | --- | --- |
 | Choose mock vs. api | `lib/pipeline/data-source.ts` |
-| HTTP call, DTOs, mappers | `lib/pipeline/fastapi-client.ts` |
+| HTTP call, DTOs, mappers | `lib/pipeline/api-client.ts` |
+| Refresh cadence | `lib/pipeline/refresh-schedule.ts` + `components/AutoRefresh.tsx` |
 | Config & secrets | `lib/env.ts` / `.env.local` |
 
 ## Expected endpoint
@@ -30,7 +34,7 @@ That's it — `lib/pipeline/data-source.ts` will select
 `ApiPipelineDataSource.getDays()` issues:
 
 ```
-GET {PIPELINE_API_BASE_URL}/runs?days={N}
+GET {PIPELINE_API_BASE_URL}{PIPELINE_API_RUNS_PATH}?days={N}
 Authorization: Bearer {PIPELINE_API_TOKEN}
 Accept: application/json
 ```
@@ -65,15 +69,36 @@ Expected response — recent business days, **newest first**:
 ]
 ```
 
+Today's payload should include **only runs that have executed** — future runs
+simply aren't returned yet (the UI shows "N runs today" growing through the day).
+
 ## If the backend shape differs
 
-Don't change the UI — change the **mappers**. In `fastapi-client.ts`:
+Don't change the UI — change the **mappers** in `api-client.ts`:
 
 - `AssetDTO`, `RunDTO`, `DayDTO` describe the wire format.
 - `toAsset` / `toRun` / `toDay` translate wire → domain (`Asset`/`Run`/`Day`).
 - `STATUS_FROM_API` maps backend status strings to the internal codes.
 
 Adjust those and the rest of the app is unaffected.
+
+## Auto-refresh (schedule-aware)
+
+The UI re-pulls data on a cadence tied to the pipeline schedules rather than
+blind polling — see `lib/pipeline/refresh-schedule.ts` and
+`components/AutoRefresh.tsx`:
+
+- It waits until just after each run is expected to finish (Full ≤10 min, Lite
+  5–10 min, + a short grace), then calls `router.refresh()`.
+- `router.refresh()` re-runs the **server** fetch and streams fresh data in,
+  preserving the user's open/search state. The Flask call and token stay
+  server-side; the browser only talks to the Next server (so `connect-src 'self'`
+  remains sufficient — no token in the client).
+- Tune the durations/grace in `refresh-schedule.ts` if a pipeline's runtime
+  changes.
+
+The runs fetch uses `cache: "no-store"`, so each refresh lands on the latest
+output instead of a cached copy.
 
 ## Tagging the pipeline (Full vs Lite)
 
@@ -91,22 +116,10 @@ is out of scope for now; tag it the same way when added.)
 ## Sourcing from Dagster / Databricks
 
 The per-asset rows (`resource`, `status`, `freshness`, `message`) come from the
-Databricks delta table the pipeline writes. The FastAPI service is expected to
-join the Dagster run metadata (run window, schedule time) with that table and
-return the shape above. `run_no` / `window_key` correspond to the schedule
-`run_window` tags (`overnight`, `pre_market`, … `post_market`).
-
-## Caching & freshness
-
-`getDays()` uses `fetch(..., { next: { revalidate: 30 } })` — Next caches the
-response server-side for 30s. Tune to match how often runs update, or switch to
-`cache: "no-store"` for always-live data.
-
-## Client-side fetching (optional)
-
-Today the call is server-side, so the browser only talks to the Next server and
-`connect-src 'self'` suffices. If you later fetch from the client, add the API
-origin to `connect-src` in `middleware.ts`.
+Databricks delta table the pipeline writes. The Flask service joins the Dagster
+run metadata (run window, schedule time) with that table and returns the shape
+above. `run_no` / `window_key` correspond to the schedule `run_window` tags
+(`overnight`, `pre_market`, … `post_market`).
 
 ## Error handling
 

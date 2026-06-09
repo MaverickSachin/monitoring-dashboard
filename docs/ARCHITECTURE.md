@@ -2,7 +2,7 @@
 
 A small, layered Next.js (App Router) app. The guiding rule: **the UI depends
 on a domain model and a data-source interface — never on a concrete backend.**
-Swapping mock data for the real FastAPI service is a one-line config change.
+Swapping mock data for the real Flask/REST service is a one-line config change.
 
 ## Layers
 
@@ -25,7 +25,7 @@ Swapping mock data for the real FastAPI service is a one-line config change.
 │   ─────────────── server-only ───────────────────              │
 │   data-source.ts    factory: mock ↔ api                        │
 │   mock-data.ts      deterministic sample dataset               │
-│   fastapi-client.ts FastAPI integration (DTOs + mappers)       │
+│   api-client.ts     REST/Flask integration (DTOs + mappers)    │
 │ lib/env.ts          server-only config                         │
 ├────────────────────────────────────────────────────────────────┤
 │ middleware.ts       per-request CSP nonce + headers            │
@@ -35,8 +35,8 @@ Swapping mock data for the real FastAPI service is a one-line config change.
 ## Data flow
 
 1. `app/page.tsx` (server component) calls `getPipelineDays()`.
-2. The data-source factory returns the mock or FastAPI implementation based on
-   `PIPELINE_DATA_SOURCE`. Both satisfy the `PipelineDataSource` interface.
+2. The data-source factory returns the mock or REST (Flask) implementation based
+   on `PIPELINE_DATA_SOURCE`. Both satisfy the `PipelineDataSource` interface.
 3. Plain serializable `Day[]` is passed to `<RunsDashboard>` (client).
 4. `useRunsTable` turns the data into a view-model (paging, search, expansion);
    the dashboard components stay presentational.

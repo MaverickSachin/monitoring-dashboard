@@ -844,3 +844,146 @@ tr.detail > td {
     display: none;
   }
 }
+
+/* ---------- error page ---------- */
+.errpage {
+  min-height: 72vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.errcard {
+  max-width: 560px;
+  width: 100%;
+  text-align: center;
+  padding: 42px 36px;
+}
+.err-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  font-family: var(--font-mono);
+}
+.err-node {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink-2);
+  background: var(--surface-2);
+  border: 1.5px solid var(--line-strong);
+  border-radius: 8px;
+  padding: 8px 13px;
+}
+.err-node.off {
+  color: var(--fail);
+  border-color: var(--fail-line);
+  animation: err-flicker 1.8s ease-in-out infinite;
+}
+.err-dash {
+  width: 44px;
+  height: 2px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--line-strong) 0 6px,
+    transparent 6px 12px
+  );
+  background-size: 12px 2px;
+  animation: err-march 0.5s linear infinite;
+}
+.err-break {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--fail);
+  animation: err-pulse 1.1s ease-in-out infinite;
+}
+.err-title {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: var(--ink);
+}
+.err-body {
+  color: var(--ink-2);
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0 0 8px;
+}
+.err-action {
+  color: var(--ink);
+  font-size: 14px;
+  margin: 0 0 22px;
+}
+.err-code {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 12.5px;
+  color: var(--muted);
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 10px 14px;
+}
+.err-cursor {
+  margin-left: 2px;
+  color: var(--accent);
+  animation: err-blink 1s step-end infinite;
+}
+.err-ref {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--muted);
+  margin: 10px 0 0;
+}
+.err-buttons {
+  margin-top: 24px;
+}
+
+@keyframes err-march {
+  to {
+    background-position: 12px 0;
+  }
+}
+@keyframes err-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 1;
+  }
+}
+@keyframes err-blink {
+  50% {
+    opacity: 0;
+  }
+}
+@keyframes err-flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  48% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  52% {
+    opacity: 1;
+  }
+  72% {
+    opacity: 0.6;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .err-node.off,
+  .err-dash,
+  .err-break,
+  .err-cursor {
+    animation: none;
+  }
+}

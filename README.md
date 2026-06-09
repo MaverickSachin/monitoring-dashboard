@@ -26,7 +26,7 @@ npm run build && npm run start   # production
 ```
 
 By default the app serves deterministic **mock data**. To connect the real
-FastAPI backend, see [docs/API_INTEGRATION.md](docs/API_INTEGRATION.md) — it's a
+Flask/REST backend, see [docs/API_INTEGRATION.md](docs/API_INTEGRATION.md) — it's a
 config change, no code edits required.
 
 ## Features
@@ -59,7 +59,7 @@ docs/                architecture, API integration, security, data model
 ## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md) — layers, data flow, design patterns
-- [FastAPI Integration](docs/API_INTEGRATION.md) — wiring the real backend
+- [API Integration](docs/API_INTEGRATION.md) — wiring the real Flask/REST backend + auto-refresh
 - [Security](docs/SECURITY.md) — CSP, headers, secret handling
 - [Data Model](docs/DATA_MODEL.md) — the domain types
 

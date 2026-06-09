@@ -13,9 +13,11 @@ export const env = {
   /** Which data source backs the dashboard: "mock" (default) or "api". */
   dataSource: oneOf(process.env.PIPELINE_DATA_SOURCE, ["mock", "api"] as const, "mock"),
   api: {
-    /** FastAPI base URL, e.g. https://pipeline-api.internal. */
+    /** REST API base URL (the Flask service), e.g. https://pipeline-api.internal. */
     baseUrl: process.env.PIPELINE_API_BASE_URL ?? "",
-    /** Bearer token / API key for the FastAPI service. */
+    /** Endpoint path returning the runs payload. */
+    runsPath: process.env.PIPELINE_API_RUNS_PATH ?? "/runs",
+    /** Bearer token / API key for the service. */
     token: process.env.PIPELINE_API_TOKEN ?? "",
     /** How many recent business days to request. */
     days: Number(process.env.PIPELINE_API_DAYS ?? "20"),

@@ -2,7 +2,7 @@
  * Deterministic mock data for local development and the default build.
  *
  * Generation is seeded (no wall-clock, no randomness) so server render and
- * client hydration always agree. Replace this source with the FastAPI client
+ * client hydration always agree. Replace this source with the REST API client
  * by setting PIPELINE_DATA_SOURCE=api — see lib/pipeline/data-source.ts.
  */
 import { LITE_ASSET_KEYS, LITE_WINDOWS, RUN_WINDOWS } from "./constants";

@@ -57,7 +57,7 @@ export interface RunWindow {
 }
 
 /**
- * Source of pipeline data. Swap the implementation (mock ↔ FastAPI) without
+ * Source of pipeline data. Swap the implementation (mock ↔ REST API) without
  * touching the UI — see lib/pipeline/data-source.ts.
  */
 export interface PipelineDataSource {

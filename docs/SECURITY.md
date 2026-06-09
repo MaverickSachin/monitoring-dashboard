@@ -42,7 +42,7 @@ Set for every response in `next.config.mjs`:
 
 ## Secrets & the server/client boundary
 
-- `lib/env.ts`, `data-source.ts`, and `fastapi-client.ts` import `server-only`:
+- `lib/env.ts`, `data-source.ts`, and `api-client.ts` import `server-only`:
   the build **fails** if they're ever pulled into a client bundle.
 - API base URL and token are read server-side and never prefixed
   `NEXT_PUBLIC_`, so they cannot reach the browser.
@@ -64,4 +64,4 @@ Set for every response in `next.config.mjs`:
 - Put the app behind the corporate SSO/identity proxy (it has no built-in
   auth — it's a read-only internal view).
 - Terminate TLS at the edge; HSTS assumes HTTPS.
-- Forward the FastAPI token from a secrets manager, not the image.
+- Forward the API token from a secrets manager, not the image.

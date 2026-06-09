@@ -1,7 +1,7 @@
 import "server-only";
 
 import { env } from "@/lib/env";
-import { ApiPipelineDataSource } from "./fastapi-client";
+import { ApiPipelineDataSource } from "./api-client";
 import { getMockDays } from "./mock-data";
 import type { Day, PipelineDataSource } from "./types";
 
@@ -19,7 +19,12 @@ export function getPipelineDataSource(): PipelineDataSource {
   if (cached) return cached;
   cached =
     env.dataSource === "api"
-      ? new ApiPipelineDataSource(env.api.baseUrl, env.api.token, env.api.days)
+      ? new ApiPipelineDataSource(
+          env.api.baseUrl,
+          env.api.runsPath,
+          env.api.token,
+          env.api.days,
+        )
       : new MockPipelineDataSource();
   return cached;
 }
