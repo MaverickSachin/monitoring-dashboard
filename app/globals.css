@@ -418,10 +418,10 @@ table.tbl {
 .tbl .colhead th.c {
   text-align: center;
 }
-/* "Run" sits midway between the left edge and column center. */
+/* "Run" sits directly above the "Run N" badge (caret + gap offset). */
 .tbl .colhead th.runh {
   text-align: left;
-  padding-left: 84px;
+  padding-left: 40px;
 }
 .tbl td {
   padding: 14px 18px;
