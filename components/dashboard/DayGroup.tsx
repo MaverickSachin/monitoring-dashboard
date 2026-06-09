@@ -41,9 +41,12 @@ export function DayGroup({
               {day.tag && <span className="dtag">{day.tag}</span>}
             </span>
             <span className="dcount">
-              {runs.length === total ? total : `${runs.length}/${total}`} runs · {c.s} ✓
-              {c.c ? ` · ${c.c} cached` : ""}
-              {c.f ? ` · ${c.f} failed` : ""}
+              <span className="dc-cell dc-runs">
+                {runs.length === total ? `${total} runs` : `${runs.length}/${total} runs`}
+              </span>
+              <span className="dc-cell dc-s">{c.s} Ok</span>
+              <span className={`dc-cell dc-c${c.c ? " on" : ""}`}>{c.c} Cached</span>
+              <span className={`dc-cell dc-f${c.f ? " on" : ""}`}>{c.f} Failed</span>
             </span>
           </div>
         </td>

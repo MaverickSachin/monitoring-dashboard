@@ -13,7 +13,7 @@ export function SearchBar({ query, onChange }: SearchBarProps) {
       <input
         value={query}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Search run, window, asset, resource, note…"
+        placeholder="Search run, window, asset, resource, message..."
         aria-label="Search runs"
       />
       {query && (

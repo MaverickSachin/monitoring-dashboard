@@ -229,7 +229,7 @@ body {
   border: 1px solid var(--line);
   border-radius: 9px;
   padding: 0 12px;
-  min-width: 320px;
+  min-width: 410px;
   box-shadow: var(--shadow-sm);
   transition: border-color 0.12s, box-shadow 0.12s;
 }
@@ -471,8 +471,33 @@ table.tbl {
 }
 .dayrow .dcount {
   justify-self: end;
-  color: var(--muted);
+  display: flex;
+  gap: 16px;
+  color: var(--ink-2);
+}
+.dayrow .dc-cell {
+  text-align: right;
   white-space: nowrap;
+}
+.dayrow .dc-runs {
+  width: 88px;
+}
+.dayrow .dc-s {
+  width: 46px;
+}
+.dayrow .dc-c {
+  width: 76px;
+}
+.dayrow .dc-f {
+  width: 68px;
+}
+.dayrow .dc-c.on {
+  color: var(--cach);
+  font-weight: 600;
+}
+.dayrow .dc-f.on {
+  color: var(--fail);
+  font-weight: 600;
 }
 
 tr.run {
