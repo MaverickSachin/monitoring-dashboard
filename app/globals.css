@@ -286,6 +286,22 @@ body {
   padding: 18px 22px;
   margin-bottom: 18px;
 }
+.banner .glance {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.banner .glance-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.banner .glance-sub {
+  font-size: 12.5px;
+  color: var(--ink-2);
+}
 .banner .big {
   display: flex;
   align-items: center;
@@ -308,7 +324,7 @@ body {
   align-items: flex-start;
   gap: 6px;
   padding: 11px 16px;
-  min-width: 150px;
+  min-width: 270px;
   font: inherit;
   text-align: left;
   background: var(--surface);
@@ -316,9 +332,6 @@ body {
   border-radius: 11px;
   cursor: pointer;
   transition: border-color 0.12s, transform 0.08s;
-}
-.lcard.wide {
-  min-width: 290px;
 }
 .lcard:hover {
   border-color: var(--line-strong);

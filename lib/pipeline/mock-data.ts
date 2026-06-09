@@ -156,7 +156,11 @@ function buildRun(
   };
 }
 
-function buildDay(meta: { date: string; dow: string; tag: string }, dayIndex: number): Day {
+function buildDay(
+  meta: { date: string; dow: string; tag: string },
+  dayIndex: number,
+  nowMinutes: number,
+): Day {
   const d = new Date(`${meta.date}T00:00:00`);
 
   const fullRuns = RUN_WINDOWS.map((w, windowIndex) =>
@@ -193,7 +197,11 @@ function buildDay(meta: { date: string; dow: string; tag: string }, dayIndex: nu
     }
   }
 
-  const runs = [...fullRuns, ...liteRuns].sort((a, b) => toMinutes(a.time) - toMinutes(b.time));
+  let runs = [...fullRuns, ...liteRuns].sort((a, b) => toMinutes(a.time) - toMinutes(b.time));
+  // Today only reflects runs that have already executed; future runs aren't
+  // present yet (mirrors what the delta table / API would return mid-day).
+  if (dayIndex === 0) runs = runs.filter((r) => toMinutes(r.time) <= nowMinutes);
+
   return {
     ...meta,
     weekday: WEEKDAYS[d.getDay()],
@@ -204,5 +212,7 @@ function buildDay(meta: { date: string; dow: string; tag: string }, dayIndex: nu
 
 /** The mock dataset: recent business days, newest first. */
 export function getMockDays(): Day[] {
-  return recentBusinessDays().map(buildDay);
+  const now = new Date();
+  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+  return recentBusinessDays().map((meta, i) => buildDay(meta, i, nowMinutes));
 }
