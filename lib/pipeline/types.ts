@@ -1,10 +1,10 @@
 /** Domain model for the Listed Equities Rebalancing pipeline monitor. */
 
-/** Materialization outcome: success, served-from-cache, or failure. */
-export type Status = "s" | "c" | "f";
+/** Run/asset state: success, cached, failure, or pending (not yet run). */
+export type Status = "s" | "c" | "f" | "p";
 
 /** Categorical data freshness as reported by the API. */
-export type Freshness = "Current" | "Cached" | "Stale";
+export type Freshness = "Current" | "Cached" | "Stale" | "Pending";
 
 /** A single asset materialized within a run. */
 export interface Asset {
@@ -42,6 +42,7 @@ export interface Counts {
   s: number;
   c: number;
   f: number;
+  p: number;
 }
 
 /** A scheduled run window, mirroring a Dagster ScheduleDefinition. */

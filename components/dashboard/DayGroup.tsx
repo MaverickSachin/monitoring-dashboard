@@ -45,13 +45,14 @@ export function DayGroup({
               {runs.length === total ? total : `${runs.length}/${total}`} runs · {c.s} ✓
               {c.c ? ` · ${c.c} cached` : ""}
               {c.f ? ` · ${c.f} failed` : ""}
+              {c.p ? ` · ${c.p} pending` : ""}
             </span>
             <span className="dmini">
               {day.runs.map((r) => (
                 <Dot
                   key={r.id}
                   status={r.status}
-                  size={11}
+                  size={14}
                   title={`Run ${r.runNo} · ${r.window} · ${STATUS_LABEL[r.status]}`}
                 />
               ))}

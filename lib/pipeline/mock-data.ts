@@ -50,7 +50,12 @@ const pad = (n: number) => (n < 10 ? `0${n}` : `${n}`);
 const isoDate = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 
 const freshnessFor = (s: Status): Freshness =>
-  s === "f" ? "Stale" : s === "c" ? "Cached" : "Current";
+  s === "p" ? "Pending" : s === "f" ? "Stale" : s === "c" ? "Cached" : "Current";
+
+const toMinutes = (time: string): number => {
+  const [h, m] = time.split(":").map(Number);
+  return h * 60 + m;
+};
 
 /** Stable 8-char hex id derived from a seed. */
 function hexId(seed: number): string {
@@ -96,18 +101,23 @@ function applyScenario(assets: Asset[], dayIndex: number, runIndex: number): voi
   }
 }
 
-function buildRun(dayIndex: number, runIndex: number, date: string): Run {
+function buildRun(dayIndex: number, runIndex: number, date: string, nowMinutes: number): Run {
   const window = RUN_WINDOWS[runIndex];
+  // Only the latest day can have runs still ahead of the current time.
+  const pending = dayIndex === 0 && toMinutes(window.time) > nowMinutes;
+
   const assets: Asset[] = ASSET_TEMPLATE.map(([name, resource, message]) => ({
     name,
     resource,
-    message,
-    status: "s",
-    freshness: "Current",
+    message: pending ? "Awaiting run" : message,
+    status: pending ? "p" : "s",
+    freshness: pending ? "Pending" : "Current",
   }));
 
-  applyScenario(assets, dayIndex, runIndex);
-  for (const a of assets) a.freshness = freshnessFor(a.status);
+  if (!pending) {
+    applyScenario(assets, dayIndex, runIndex);
+    for (const a of assets) a.freshness = freshnessFor(a.status);
+  }
 
   return {
     id: hexId(dayIndex * 53 + runIndex * 7 + 1),
@@ -116,22 +126,32 @@ function buildRun(dayIndex: number, runIndex: number, date: string): Run {
     windowKey: window.key,
     time: window.time,
     date,
-    status: rollUp(assets.map((a) => a.status)),
+    status: pending ? "p" : rollUp(assets.map((a) => a.status)),
     assets,
   };
 }
 
-function buildDay(meta: { date: string; dow: string; tag: string }, dayIndex: number): Day {
+function buildDay(
+  meta: { date: string; dow: string; tag: string },
+  dayIndex: number,
+  nowMinutes: number,
+): Day {
   const d = new Date(`${meta.date}T00:00:00`);
   return {
     ...meta,
     weekday: WEEKDAYS[d.getDay()],
     dateLabel: `${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`,
-    runs: RUN_WINDOWS.map((_, runIndex) => buildRun(dayIndex, runIndex, meta.date)),
+    runs: RUN_WINDOWS.map((_, runIndex) => buildRun(dayIndex, runIndex, meta.date, nowMinutes)),
   };
 }
 
-/** The mock dataset: recent business days, newest first. */
+/**
+ * The mock dataset: recent business days, newest first. Runs on the latest day
+ * whose scheduled time hasn't passed are marked pending (the real API would
+ * report this directly).
+ */
 export function getMockDays(): Day[] {
-  return recentBusinessDays().map(buildDay);
+  const now = new Date();
+  const nowMinutes = now.getHours() * 60 + now.getMinutes();
+  return recentBusinessDays().map((meta, i) => buildDay(meta, i, nowMinutes));
 }

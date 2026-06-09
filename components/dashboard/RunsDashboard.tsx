@@ -38,6 +38,9 @@ export function RunsDashboard({ days }: RunsDashboardProps) {
             <span className="item">
               <Dot status="f" /> Failure
             </span>
+            <span className="item">
+              <Dot status="p" /> Pending
+            </span>
           </div>
           <ThemeToggle />
         </div>

@@ -16,17 +16,27 @@ interface HealthBannerProps {
 /** "Health at a glance" summary for the latest day + its 7 scheduled run dots. */
 export function HealthBanner({ day, onPickRun }: HealthBannerProps) {
   const c = countRuns(day);
+  const total = day.runs.length;
+  const done = c.s + c.c + c.f;
 
   return (
     <div className="banner card">
       <div className="big">
         <Dot status={overallStatus(c)} size={22} />
-        {healthWord(c)}
+        <span className="bwrap">
+          <span className="bword">{healthWord(c)}</span>
+          {c.p > 0 && (
+            <span className="bprog">
+              {done} / {total} runs complete
+            </span>
+          )}
+        </span>
       </div>
       <div className="pills">
         <span className="pill ok">{c.s} Success</span>
         <span className="pill warn">{c.c} Cached</span>
         <span className="pill bad">{c.f} Failed</span>
+        {c.p > 0 && <span className="pill pend">{c.p} Pending</span>}
       </div>
       <div className="runs7">
         {day.runs.map((run) => (

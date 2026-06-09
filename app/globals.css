@@ -211,6 +211,11 @@ body {
   background: var(--fail);
   box-shadow: 0 0 0 3px var(--fail-bg);
 }
+.dot.p {
+  background: transparent;
+  box-shadow: inset 0 0 0 1.5px var(--muted);
+  opacity: 0.6;
+}
 .dot .ic {
   display: none;
 }
@@ -291,7 +296,7 @@ body {
 .banner {
   display: flex;
   align-items: center;
-  gap: 22px;
+  gap: 18px;
   flex-wrap: wrap;
   padding: 18px 22px;
   margin-bottom: 18px;
@@ -301,9 +306,18 @@ body {
   align-items: center;
   gap: 12px;
   font-size: 19px;
-  font-weight: 650;
   font-weight: 600;
   white-space: nowrap;
+}
+.banner .big .bwrap {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+.banner .big .bprog {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: var(--muted);
 }
 .banner .pills {
   display: flex;
@@ -333,10 +347,15 @@ body {
   color: #b91c1c;
   border-color: var(--fail-line);
 }
+.pill.pend {
+  background: var(--surface-2);
+  color: var(--ink-2);
+  border-color: var(--line-strong);
+}
 .runs7 {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
   margin-left: auto;
 }
 .runs7 .r {
@@ -593,11 +612,17 @@ tr.detail > td {
   color: var(--fail);
   font-weight: 600;
 }
+.afresh.f-p {
+  color: var(--muted);
+}
 .drawer .darow .ameta.f-c {
   color: var(--cach);
 }
 .drawer .darow .ameta.f-f {
   color: var(--fail);
+}
+.drawer .darow .ameta.f-p {
+  color: var(--muted);
 }
 .arow .anote {
   font-size: 13px;

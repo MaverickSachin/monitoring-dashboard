@@ -56,6 +56,7 @@ const STATUS_FROM_API: Record<string, Status> = {
   success: "s",
   cached: "c",
   failure: "f",
+  pending: "p",
 };
 
 const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];

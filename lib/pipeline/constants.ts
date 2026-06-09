@@ -5,13 +5,15 @@ export const STATUS_LABEL: Record<Status, string> = {
   s: "Success",
   c: "Cached",
   f: "Failure",
+  p: "Pending",
 };
 
 /** Phrase used for a run's overall status in summaries. */
 export const STATUS_PHRASE: Record<Status, string> = {
-  s: "all success",
-  c: "cached",
-  f: "has failures",
+  s: "All Success",
+  c: "Cached",
+  f: "Has Failures",
+  p: "Not yet run",
 };
 
 /**

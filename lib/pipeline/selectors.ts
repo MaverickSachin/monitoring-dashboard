@@ -5,14 +5,14 @@ export const runKey = (run: Run): string => `${run.date}_${run.windowKey}`;
 
 /** Tally a run's assets by status. */
 export function countAssets(run: Run): Counts {
-  const c: Counts = { s: 0, c: 0, f: 0 };
+  const c: Counts = { s: 0, c: 0, f: 0, p: 0 };
   for (const a of run.assets) c[a.status]++;
   return c;
 }
 
 /** Tally a day's runs by status. */
 export function countRuns(day: Day): Counts {
-  const c: Counts = { s: 0, c: 0, f: 0 };
+  const c: Counts = { s: 0, c: 0, f: 0, p: 0 };
   for (const r of day.runs) c[r.status]++;
   return c;
 }
@@ -26,6 +26,7 @@ export function rollUp(statuses: Status[]): Status {
 
 /** Compact asset breakdown, e.g. "18 ok · 2 cached". */
 export function assetBreakdown(run: Run): string {
+  if (run.status === "p") return "—";
   const c = countAssets(run);
   const parts: string[] = [];
   if (c.s) parts.push(`${c.s} ok`);
@@ -36,6 +37,7 @@ export function assetBreakdown(run: Run): string {
 
 /** Generic, pipeline-level summary of a run — never a single asset's note. */
 export function runSummary(run: Run): string {
+  if (run.status === "p") return `Scheduled for ${run.time} — Not yet run`;
   const c = countAssets(run);
   const n = run.assets.length;
   if (c.f) return `${c.f} of ${n} assets failed to materialize`;
@@ -43,12 +45,14 @@ export function runSummary(run: Run): string {
   return `All ${n} assets materialized successfully`;
 }
 
-/** Overall status from a tally (worst wins). */
+/** Overall status from a tally: failures first, then in-progress, then cached. */
 export function overallStatus(c: Counts): Status {
-  return c.f ? "f" : c.c ? "c" : "s";
+  return c.f ? "f" : c.p ? "p" : c.c ? "c" : "s";
 }
 
 /** Headline phrase for the health banner. */
 export function healthWord(c: Counts): string {
-  return c.f ? "Needs attention" : c.c ? "All Caught Up" : "All Clear";
+  if (c.f) return "Needs attention";
+  if (c.p) return "In progress";
+  return c.c ? "All Caught Up" : "All Clear";
 }

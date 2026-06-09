@@ -53,8 +53,8 @@ Expected response — recent business days, **newest first**:
           {
             "name": "positions_aladdin",
             "resource": "Aladdin",
-            "status": "success",      // "success" | "cached" | "failure"
-            "freshness": "Current",   // "Current" | "Cached" | "Stale"
+            "status": "success",      // "success" | "cached" | "failure" | "pending"
+            "freshness": "Current",   // "Current" | "Cached" | "Stale" | "Pending"
             "message": "Aladdin position data loaded"
           }
         ]
@@ -65,6 +65,11 @@ Expected response — recent business days, **newest first**:
 ```
 
 ## If the backend shape differs
+
+Runs whose scheduled time hasn't passed should be reported with
+`status: "pending"` (and `freshness: "Pending"`); the UI renders them as hollow
+dots and excludes them from the day's "complete" count. Alternatively, omit
+future runs entirely.
 
 Don't change the UI — change the **mappers**. In `fastapi-client.ts`:
 
