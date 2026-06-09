@@ -1,9 +1,10 @@
 # Rebalancing Monitoring Dashboard
 
-A monitoring dashboard for the **Listed Equities Rebalancing** Dagster pipeline.
-The pipeline runs 7× a day on weekdays; this UI shows the status of each run and
-of every asset it materializes, using green / amber / red dots for
-**success / cached / failure**.
+A monitoring dashboard for the **Listed Equities Rebalancing** Dagster pipelines.
+Two pipelines write to the same delta tables — **Rebalancing** (full, 7 fixed
+daily windows) and **Rebalancing Lite** (frequent intraday source refreshes) —
+and this UI shows the status of each run and of every asset it materializes,
+using green / amber / red dots for **success / cached / failure**.
 
 Built for a non-technical audience (traders, Excel users) — clean, minimal, and
 quick to browse.
@@ -30,11 +31,13 @@ config change, no code edits required.
 
 ## Features
 
-- **Health banner** — the latest day at a glance: overall verdict, success /
-  cached / failed counts, and the 7 scheduled run dots (click one for details).
-- **Day-grouped runs table** — collapsible days; click a run to expand its
-  per-asset breakdown (asset · resource · data freshness · status message).
-- **Search** across run id, window, asset, resource, and note.
+- **Health banner** — the latest day's Full-pipeline checkpoints at a glance:
+  overall verdict, success / cached / failed counts, and the 7 scheduled run
+  dots (click one for details).
+- **Day-grouped runs table** — every run from both pipelines, tagged with a
+  **Pipeline** column; collapsible days; click a run to expand its per-asset
+  breakdown (asset · resource · data freshness · status message).
+- **Search** across run id, window, pipeline, asset, resource, and note.
 - **Pagination** — 5 days per page, with older history behind Newer/Older.
 - **Light / dark mode** — persisted, applied before first paint (no flash).
 

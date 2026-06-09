@@ -24,16 +24,17 @@ export function RunsTable({
     <div className="card tablewrap">
       <table className="tbl">
         <colgroup>
-          <col style={{ width: "32%" }} />
-          <col style={{ width: "92px" }} />
-          <col style={{ width: "170px" }} />
-          <col style={{ width: "92px" }} />
+          <col style={{ width: "24%" }} />
+          <col style={{ width: "150px" }} />
+          <col style={{ width: "90px" }} />
+          <col style={{ width: "185px" }} />
+          <col style={{ width: "84px" }} />
           <col />
         </colgroup>
         <tbody>
           {days.length === 0 ? (
             <tr>
-              <td className="empty" colSpan={5}>
+              <td className="empty" colSpan={6}>
                 No runs match “{query}”.
               </td>
             </tr>

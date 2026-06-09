@@ -1,5 +1,11 @@
 import { Dot } from "@/components/ui/Dot";
-import { assetBreakdown, runSummary, STATUS_LABEL, type Run } from "@/lib/pipeline";
+import {
+  assetBreakdown,
+  PIPELINE_LABEL,
+  runSummary,
+  STATUS_LABEL,
+  type Run,
+} from "@/lib/pipeline";
 import { AssetDetailTable } from "./AssetDetailTable";
 
 interface RunRowProps {
@@ -20,8 +26,14 @@ export function RunRow({ run, isOpen, onToggle }: RunRowProps) {
             </span>
             <span className="rinfo">
               <span className="rtop">
-                <span className="rno">Run {run.runNo}</span>
-                {run.window}
+                {run.pipeline === "full" ? (
+                  <>
+                    <span className="rno">Run {run.runNo}</span>
+                    {run.window}
+                  </>
+                ) : (
+                  `${run.window} refresh`
+                )}
               </span>
               <span className="rsub">
                 {run.id} · {run.assets.length} assets
@@ -29,8 +41,11 @@ export function RunRow({ run, isOpen, onToggle }: RunRowProps) {
             </span>
           </span>
         </td>
-        <td className="time">{run.time}</td>
         <td>
+          <span className={`pchip ${run.pipeline}`}>{PIPELINE_LABEL[run.pipeline]}</span>
+        </td>
+        <td className="time">{run.time}</td>
+        <td className="assets">
           <span className="note">{assetBreakdown(run)}</span>
         </td>
         <td className="c">
@@ -42,7 +57,7 @@ export function RunRow({ run, isOpen, onToggle }: RunRowProps) {
       </tr>
       {isOpen && (
         <tr className="detail">
-          <td colSpan={5}>
+          <td colSpan={6}>
             <AssetDetailTable assets={run.assets} />
           </td>
         </tr>

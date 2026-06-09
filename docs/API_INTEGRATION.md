@@ -44,7 +44,8 @@ Expected response — recent business days, **newest first**:
     "runs": [
       {
         "id": "3227d408",
-        "run_no": 3,
+        "pipeline": "full",        // "full" | "lite"
+        "run_no": 3,               // full runs only; omit for lite
         "window": "Market open",
         "window_key": "market_open",
         "scheduled_time": "09:00",
@@ -53,8 +54,8 @@ Expected response — recent business days, **newest first**:
           {
             "name": "positions_aladdin",
             "resource": "Aladdin",
-            "status": "success",      // "success" | "cached" | "failure" | "pending"
-            "freshness": "Current",   // "Current" | "Cached" | "Stale" | "Pending"
+            "status": "success",      // "success" | "cached" | "failure"
+            "freshness": "Current",   // "Current" | "Cached" | "Stale"
             "message": "Aladdin position data loaded"
           }
         ]
@@ -66,11 +67,6 @@ Expected response — recent business days, **newest first**:
 
 ## If the backend shape differs
 
-Runs whose scheduled time hasn't passed should be reported with
-`status: "pending"` (and `freshness: "Pending"`); the UI renders them as hollow
-dots and excludes them from the day's "complete" count. Alternatively, omit
-future runs entirely.
-
 Don't change the UI — change the **mappers**. In `fastapi-client.ts`:
 
 - `AssetDTO`, `RunDTO`, `DayDTO` describe the wire format.
@@ -78,6 +74,19 @@ Don't change the UI — change the **mappers**. In `fastapi-client.ts`:
 - `STATUS_FROM_API` maps backend status strings to the internal codes.
 
 Adjust those and the rest of the app is unaffected.
+
+## Tagging the pipeline (Full vs Lite)
+
+Both pipelines write to the same delta tables, so each write must be attributed.
+The schedules are deterministic, so the backend can tag every run:
+
+1. **Timestamp → schedule match** (primary): match the write time to the nearest
+   cron time within a tolerance — 09:00 ⇒ Full, 09:15/09:30/… ⇒ Lite.
+2. **Asset coverage** (corroboration): a write touching reconciliation/pricing
+   must be Full (Lite only writes its 5-asset source subset).
+
+Do this in the API so the UI just reads `pipeline`. (Forecasting — 06:00 daily —
+is out of scope for now; tag it the same way when added.)
 
 ## Sourcing from Dagster / Databricks
 

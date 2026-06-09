@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { runKey, type Day, type Run } from "@/lib/pipeline";
+import { PIPELINE_LABEL, runKey, type Day, type Run } from "@/lib/pipeline";
 
 const DAYS_PER_PAGE = 5;
 
@@ -11,6 +11,7 @@ export interface VisibleDay {
 const matches = (run: Run, q: string) =>
   run.id.toLowerCase().includes(q) ||
   run.window.toLowerCase().includes(q) ||
+  PIPELINE_LABEL[run.pipeline].toLowerCase().includes(q) ||
   run.assets.some(
     (a) =>
       a.name.toLowerCase().includes(q) ||

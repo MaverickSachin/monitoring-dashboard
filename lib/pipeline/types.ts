@@ -1,10 +1,13 @@
 /** Domain model for the Listed Equities Rebalancing pipeline monitor. */
 
-/** Run/asset state: success, cached, failure, or pending (not yet run). */
-export type Status = "s" | "c" | "f" | "p";
+/** Run/asset state: success, cached, or failure. */
+export type Status = "s" | "c" | "f";
+
+/** Which pipeline produced a run. Both write to the same delta tables. */
+export type Pipeline = "full" | "lite";
 
 /** Categorical data freshness as reported by the API. */
-export type Freshness = "Current" | "Cached" | "Stale" | "Pending";
+export type Freshness = "Current" | "Cached" | "Stale";
 
 /** A single asset materialized within a run. */
 export interface Asset {
@@ -15,12 +18,13 @@ export interface Asset {
   message: string; // data status message
 }
 
-/** One scheduled execution of the pipeline and its materialized assets. */
+/** One scheduled execution of a pipeline and its materialized assets. */
 export interface Run {
   id: string;
-  runNo: number; // 1..7, matching the Dagster schedule order
-  window: string; // human label, e.g. "Market open"
-  windowKey: string; // stable key, e.g. "market_open"
+  pipeline: Pipeline;
+  runNo?: number; // 1..7 for full runs; absent for lite refreshes
+  window: string; // human label, e.g. "Market open" or "Intraday"
+  windowKey: string; // stable key, e.g. "market_open" / "lite_intraday"
   time: string; // local schedule time, e.g. "09:00"
   date: string; // ISO date, e.g. "2026-06-09"
   status: Status; // rolled up from the assets
@@ -42,7 +46,6 @@ export interface Counts {
   s: number;
   c: number;
   f: number;
-  p: number;
 }
 
 /** A scheduled run window, mirroring a Dagster ScheduleDefinition. */

@@ -5,7 +5,7 @@
  * client hydration always agree. Replace this source with the FastAPI client
  * by setting PIPELINE_DATA_SOURCE=api — see lib/pipeline/data-source.ts.
  */
-import { RUN_WINDOWS } from "./constants";
+import { LITE_ASSET_KEYS, LITE_WINDOWS, RUN_WINDOWS } from "./constants";
 import { rollUp } from "./selectors";
 import type { Asset, Day, Freshness, Run, Status } from "./types";
 
@@ -50,7 +50,7 @@ const pad = (n: number) => (n < 10 ? `0${n}` : `${n}`);
 const isoDate = (d: Date) => `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
 
 const freshnessFor = (s: Status): Freshness =>
-  s === "p" ? "Pending" : s === "f" ? "Stale" : s === "c" ? "Cached" : "Current";
+  s === "f" ? "Stale" : s === "c" ? "Cached" : "Current";
 
 const toMinutes = (time: string): number => {
   const [h, m] = time.split(":").map(Number);
@@ -78,80 +78,131 @@ function recentBusinessDays(): { date: string; dow: string; tag: string }[] {
   return out;
 }
 
-/** Seed a few realistic non-success states so the demo shows variety. */
-function applyScenario(assets: Asset[], dayIndex: number, runIndex: number): void {
-  if (dayIndex === 0 && runIndex === 3) {
+// Lite refreshes only the source-data subset of the full template.
+const LITE_TEMPLATE = ASSET_TEMPLATE.filter(([name]) => LITE_ASSET_KEYS.includes(name));
+
+function buildAssets(template: ReadonlyArray<[string, string, string]>): Asset[] {
+  return template.map(([name, resource, message]) => ({
+    name,
+    resource,
+    message,
+    status: "s",
+    freshness: "Current",
+  }));
+}
+
+/** Seed a few realistic non-success states on the Full pipeline for variety. */
+function applyFullScenario(assets: Asset[], dayIndex: number, windowIndex: number): void {
+  if (dayIndex === 0 && windowIndex === 3) {
     assets.forEach((a, i) => i >= 2 && (a.status = "c"));
-  } else if (dayIndex === 1 && runIndex === 5) {
+  } else if (dayIndex === 1 && windowIndex === 5) {
     assets[1].status = "f";
     assets[1].message = "Aladdin position feed timed out (retry 3/3)";
     assets[14].status = "f";
     assets[14].message = "Skipped — upstream positions failed";
-  } else if (dayIndex === 2 && runIndex === 2) {
+  } else if (dayIndex === 2 && windowIndex === 2) {
     assets.forEach((a) => (a.status = "c"));
-  } else if (dayIndex === 3 && runIndex === 4) {
+  } else if (dayIndex === 3 && windowIndex === 4) {
     assets[9].status = "c";
-  } else if (dayIndex === 4 && runIndex === 6) {
+  } else if (dayIndex === 4 && windowIndex === 6) {
     assets[7].status = "f";
     assets[7].message = "NAV snapshot missing EOD prices";
     assets[9].status = "c";
   } else if (dayIndex >= 5) {
-    const h = dayIndex * 31 + runIndex * 7;
+    const h = dayIndex * 31 + windowIndex * 7;
     if (h % 5 === 0) assets[h % assets.length].status = "c";
   }
 }
 
-function buildRun(dayIndex: number, runIndex: number, date: string, nowMinutes: number): Run {
-  const window = RUN_WINDOWS[runIndex];
-  // Only the latest day can have runs still ahead of the current time.
-  const pending = dayIndex === 0 && toMinutes(window.time) > nowMinutes;
-
-  const assets: Asset[] = ASSET_TEMPLATE.map(([name, resource, message]) => ({
-    name,
-    resource,
-    message: pending ? "Awaiting run" : message,
-    status: pending ? "p" : "s",
-    freshness: pending ? "Pending" : "Current",
-  }));
-
-  if (!pending) {
-    applyScenario(assets, dayIndex, runIndex);
-    for (const a of assets) a.freshness = freshnessFor(a.status);
+/** And a couple on the Lite pipeline. liteIndex is the run's order within the day. */
+function applyLiteScenario(assets: Asset[], dayIndex: number, liteIndex: number): void {
+  if (dayIndex === 0 && liteIndex === 3) {
+    assets.forEach((a) => (a.status = "c"));
+  } else if (dayIndex === 1 && liteIndex === 6) {
+    assets[1].status = "f";
+    assets[1].message = "Aladdin position feed timed out";
+  } else if (dayIndex >= 5) {
+    const h = dayIndex * 17 + liteIndex * 5;
+    if (h % 7 === 0) assets[h % assets.length].status = "c";
   }
+}
 
+function buildRun(
+  opts: {
+    seed: number;
+    pipeline: Run["pipeline"];
+    runNo?: number;
+    window: string;
+    windowKey: string;
+    time: string;
+    date: string;
+    template: ReadonlyArray<[string, string, string]>;
+    scenario: (assets: Asset[]) => void;
+  },
+): Run {
+  const assets = buildAssets(opts.template);
+  opts.scenario(assets);
+  for (const a of assets) a.freshness = freshnessFor(a.status);
   return {
-    id: hexId(dayIndex * 53 + runIndex * 7 + 1),
-    runNo: window.no,
-    window: window.name,
-    windowKey: window.key,
-    time: window.time,
-    date,
-    status: pending ? "p" : rollUp(assets.map((a) => a.status)),
+    id: hexId(opts.seed),
+    pipeline: opts.pipeline,
+    runNo: opts.runNo,
+    window: opts.window,
+    windowKey: opts.windowKey,
+    time: opts.time,
+    date: opts.date,
+    status: rollUp(assets.map((a) => a.status)),
     assets,
   };
 }
 
-function buildDay(
-  meta: { date: string; dow: string; tag: string },
-  dayIndex: number,
-  nowMinutes: number,
-): Day {
+function buildDay(meta: { date: string; dow: string; tag: string }, dayIndex: number): Day {
   const d = new Date(`${meta.date}T00:00:00`);
+
+  const fullRuns = RUN_WINDOWS.map((w, windowIndex) =>
+    buildRun({
+      seed: dayIndex * 100000 + toMinutes(w.time) * 10,
+      pipeline: "full",
+      runNo: w.no,
+      window: w.name,
+      windowKey: w.key,
+      time: w.time,
+      date: meta.date,
+      template: ASSET_TEMPLATE,
+      scenario: (assets) => applyFullScenario(assets, dayIndex, windowIndex),
+    }),
+  );
+
+  const liteRuns: Run[] = [];
+  let liteIndex = 0;
+  for (const lw of LITE_WINDOWS) {
+    for (const time of lw.times) {
+      const index = liteIndex++;
+      liteRuns.push(
+        buildRun({
+          seed: dayIndex * 100000 + toMinutes(time) * 10 + 1,
+          pipeline: "lite",
+          window: lw.name,
+          windowKey: lw.key,
+          time,
+          date: meta.date,
+          template: LITE_TEMPLATE,
+          scenario: (assets) => applyLiteScenario(assets, dayIndex, index),
+        }),
+      );
+    }
+  }
+
+  const runs = [...fullRuns, ...liteRuns].sort((a, b) => toMinutes(a.time) - toMinutes(b.time));
   return {
     ...meta,
     weekday: WEEKDAYS[d.getDay()],
     dateLabel: `${d.getDate()} ${MONTHS[d.getMonth()]} ${d.getFullYear()}`,
-    runs: RUN_WINDOWS.map((_, runIndex) => buildRun(dayIndex, runIndex, meta.date, nowMinutes)),
+    runs,
   };
 }
 
-/**
- * The mock dataset: recent business days, newest first. Runs on the latest day
- * whose scheduled time hasn't passed are marked pending (the real API would
- * report this directly).
- */
+/** The mock dataset: recent business days, newest first. */
 export function getMockDays(): Day[] {
-  const now = new Date();
-  const nowMinutes = now.getHours() * 60 + now.getMinutes();
-  return recentBusinessDays().map((meta, i) => buildDay(meta, i, nowMinutes));
+  return recentBusinessDays().map(buildDay);
 }

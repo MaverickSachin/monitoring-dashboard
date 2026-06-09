@@ -1,5 +1,4 @@
-import { Dot } from "@/components/ui/Dot";
-import { countRuns, STATUS_LABEL, type Day, type Run } from "@/lib/pipeline";
+import { countRuns, type Day, type Run } from "@/lib/pipeline";
 import { RunRow } from "./RunRow";
 
 interface DayGroupProps {
@@ -30,7 +29,7 @@ export function DayGroup({
         onClick={onToggleDay}
         aria-expanded={!collapsed}
       >
-        <td colSpan={5}>
+        <td colSpan={6}>
           <div className="dlabel">
             <span className="dcar" aria-hidden="true">
               ▸
@@ -45,17 +44,6 @@ export function DayGroup({
               {runs.length === total ? total : `${runs.length}/${total}`} runs · {c.s} ✓
               {c.c ? ` · ${c.c} cached` : ""}
               {c.f ? ` · ${c.f} failed` : ""}
-              {c.p ? ` · ${c.p} pending` : ""}
-            </span>
-            <span className="dmini">
-              {day.runs.map((r) => (
-                <Dot
-                  key={r.id}
-                  status={r.status}
-                  size={14}
-                  title={`Run ${r.runNo} · ${r.window} · ${STATUS_LABEL[r.status]}`}
-                />
-              ))}
             </span>
           </div>
         </td>
@@ -66,21 +54,24 @@ export function DayGroup({
             <th scope="col" className="runh">
               Run
             </th>
-            <th scope="col">Time</th>
-            <th scope="col">Assets</th>
+            <th scope="col">Pipeline</th>
+            <th scope="col">Scheduled</th>
+            <th scope="col" className="assets">Assets</th>
             <th scope="col" className="c">
               Status
             </th>
             <th scope="col">Run summary</th>
           </tr>
-          {runs.map((run) => (
-            <RunRow
-              key={run.id}
-              run={run}
-              isOpen={isRunOpen(run)}
-              onToggle={() => onToggleRun(run)}
-            />
-          ))}
+          {[...runs]
+            .sort((a, b) => b.time.localeCompare(a.time))
+            .map((run) => (
+              <RunRow
+                key={run.id}
+                run={run}
+                isOpen={isRunOpen(run)}
+                onToggle={() => onToggleRun(run)}
+              />
+            ))}
         </>
       )}
     </>

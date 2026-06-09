@@ -25,7 +25,7 @@ export function RunsDashboard({ days }: RunsDashboardProps) {
           <h1 className="title">
             Listed Equities <span className="u">Rebalancing</span>
           </h1>
-          <p className="sub">Dagster Pipeline · Monitoring Dashboard · 7 Runs / Weekday</p>
+          <p className="sub">Dagster · Rebalancing &amp; Rebalancing Lite · Monitoring Dashboard</p>
         </div>
         <div className="topright">
           <div className="legend">
@@ -37,9 +37,6 @@ export function RunsDashboard({ days }: RunsDashboardProps) {
             </span>
             <span className="item">
               <Dot status="f" /> Failure
-            </span>
-            <span className="item">
-              <Dot status="p" /> Pending
             </span>
           </div>
           <ThemeToggle />

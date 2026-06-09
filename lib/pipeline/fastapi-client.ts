@@ -37,7 +37,8 @@ interface AssetDTO {
 
 interface RunDTO {
   id: string;
-  run_no: number;
+  pipeline: string; // "full" | "lite" — tag via schedule-time match (see below)
+  run_no?: number; // present for full runs only
   window: string;
   window_key: string;
   scheduled_time: string; // "09:00"
@@ -56,7 +57,6 @@ const STATUS_FROM_API: Record<string, Status> = {
   success: "s",
   cached: "c",
   failure: "f",
-  pending: "p",
 };
 
 const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -80,6 +80,7 @@ function toRun(dto: RunDTO): Run {
   const assets = dto.assets.map(toAsset);
   return {
     id: dto.id,
+    pipeline: dto.pipeline === "lite" ? "lite" : "full",
     runNo: dto.run_no,
     window: dto.window,
     windowKey: dto.window_key,
