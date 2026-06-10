@@ -331,11 +331,13 @@ body {
   border: 1px solid var(--line);
   border-radius: 11px;
   cursor: pointer;
-  transition: border-color 0.12s, transform 0.08s;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.14s, transform 0.14s, box-shadow 0.14s;
 }
 .lcard:hover {
-  border-color: var(--line-strong);
-  transform: translateY(-1px);
+  border-color: var(--accent);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
 }
 .lcard .lc-label {
   font-size: 11px;
@@ -447,10 +449,13 @@ table.tbl {
 }
 .dayrow .dcar {
   display: inline-block;
-  width: 12px;
-  color: var(--muted);
-  font-size: 12px;
-  transition: transform 0.15s;
+  width: 16px;
+  color: var(--ink-2);
+  font-size: 15px;
+  transition: transform 0.15s, color 0.12s;
+}
+.dayrow:hover .dcar {
+  color: var(--accent);
 }
 .dayrow.open .dcar {
   transform: rotate(90deg);
@@ -520,11 +525,14 @@ tr.run.open td {
 }
 .car {
   display: inline-block;
-  width: 12px;
-  color: var(--muted);
-  font-size: 11px;
-  transition: transform 0.15s;
+  width: 15px;
+  color: var(--ink-2);
+  font-size: 14px;
+  transition: transform 0.15s, color 0.12s;
   flex: none;
+}
+tr.run:hover .car {
+  color: var(--accent);
 }
 tr.run.open .car {
   transform: rotate(90deg);
