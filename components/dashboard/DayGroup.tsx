@@ -58,7 +58,7 @@ export function DayGroup({
               Run
             </th>
             <th scope="col">Pipeline</th>
-            <th scope="col">Scheduled</th>
+            <th scope="col">Run Time</th>
             <th scope="col" className="assets">Assets</th>
             <th scope="col" className="c">
               Status

@@ -19,12 +19,7 @@ export function getPipelineDataSource(): PipelineDataSource {
   if (cached) return cached;
   cached =
     env.dataSource === "api"
-      ? new ApiPipelineDataSource(
-          env.api.baseUrl,
-          env.api.runsPath,
-          env.api.token,
-          env.api.days,
-        )
+      ? new ApiPipelineDataSource(env.api)
       : new MockPipelineDataSource();
   return cached;
 }

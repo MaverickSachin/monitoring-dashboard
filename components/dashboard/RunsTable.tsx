@@ -24,9 +24,9 @@ export function RunsTable({
     <div className="card tablewrap">
       <table className="tbl">
         <colgroup>
-          <col style={{ width: "24%" }} />
+          <col style={{ width: "23%" }} />
           <col style={{ width: "150px" }} />
-          <col style={{ width: "90px" }} />
+          <col style={{ width: "108px" }} />
           <col style={{ width: "185px" }} />
           <col style={{ width: "84px" }} />
           <col />

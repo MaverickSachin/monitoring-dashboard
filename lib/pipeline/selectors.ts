@@ -1,7 +1,7 @@
 import type { Counts, Day, Run, Status } from "./types";
 
 /** Stable identity for a run, used for React keys and open/closed state. */
-export const runKey = (run: Run): string => `${run.date}_${run.pipeline}_${run.time}`;
+export const runKey = (run: Run): string => `${run.date}_${run.id}`;
 
 /** Tally a run's assets by status. */
 export function countAssets(run: Run): Counts {

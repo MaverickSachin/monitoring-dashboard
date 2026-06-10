@@ -26,13 +26,13 @@ export function RunRow({ run, isOpen, onToggle }: RunRowProps) {
             </span>
             <span className="rinfo">
               <span className="rtop">
-                {run.pipeline === "full" ? (
+                {run.runNo != null ? (
                   <>
                     <span className="rno">Run {run.runNo}</span>
                     {run.window}
                   </>
                 ) : (
-                  `${run.window} refresh`
+                  run.window
                 )}
               </span>
               <span className="rsub">

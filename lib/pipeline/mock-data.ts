@@ -186,7 +186,7 @@ function buildDay(
         buildRun({
           seed: dayIndex * 100000 + toMinutes(time) * 10 + 1,
           pipeline: "lite",
-          window: lw.name,
+          window: `${lw.name} refresh`,
           windowKey: lw.key,
           time,
           date: meta.date,

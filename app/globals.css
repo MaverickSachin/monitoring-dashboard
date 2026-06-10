@@ -391,6 +391,7 @@ table.tbl {
   padding: 9px 18px;
   border-bottom: 1px solid var(--line);
   background: var(--surface);
+  white-space: nowrap;
 }
 .tbl .colhead th.c {
   text-align: center;
@@ -409,7 +410,7 @@ table.tbl {
 .tbl td.c {
   text-align: center;
 }
-/* breathing room between the Scheduled and Assets columns */
+/* breathing room between the Run Time and Assets columns */
 .tbl td.assets,
 .tbl .colhead th.assets {
   padding-left: 28px;

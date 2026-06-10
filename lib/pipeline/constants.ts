@@ -49,7 +49,7 @@ export const LITE_WINDOWS: readonly { key: string; name: string; times: string[]
   },
 ];
 
-/** Asset keys the Lite pipeline refreshes (source data only). */
+/** Asset keys the Lite pipeline refreshes (source data only) — mock dataset. */
 export const LITE_ASSET_KEYS: readonly string[] = [
   "trades_aladdin",
   "positions_aladdin",
@@ -57,3 +57,10 @@ export const LITE_ASSET_KEYS: readonly string[] = [
   "cash_forecaster_export_schedule",
   "policy_tree",
 ];
+
+/**
+ * Live-data pipeline classification: Lite runs write far fewer assets than Full
+ * (~2–4 vs ~13–17), so a run is Lite when its asset count is at or below this
+ * threshold (well inside the gap); Full otherwise.
+ */
+export const LITE_MAX_ASSETS = 8;

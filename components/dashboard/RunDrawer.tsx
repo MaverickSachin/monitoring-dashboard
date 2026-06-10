@@ -35,7 +35,7 @@ export function RunDrawer({ run, onClose }: RunDrawerProps) {
                 ✕
               </button>
               <div className="did">
-                Run {run.runNo} · {run.window}
+                {run.runNo != null ? `Run ${run.runNo} · ${run.window}` : run.window}
               </div>
               <div className="dmeta">
                 {run.date} · {run.time}
