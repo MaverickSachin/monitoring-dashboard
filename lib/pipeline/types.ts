@@ -3,8 +3,8 @@
 /** Run/asset state: success, cached, or failure. */
 export type Status = "s" | "c" | "f";
 
-/** Which pipeline produced a run. Both write to the same delta tables. */
-export type Pipeline = "full" | "lite";
+/** Which pipeline produced a run. All write to the same delta tables. */
+export type Pipeline = "full" | "lite" | "forecasting";
 
 /** Categorical data freshness as reported by the API. */
 export type Freshness = "Current" | "Cached" | "Stale";

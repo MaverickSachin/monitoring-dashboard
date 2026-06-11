@@ -1,6 +1,13 @@
 import "server-only";
 
-import { LITE_MAX_ASSETS, LITE_WINDOWS, RUN_WINDOWS } from "./constants";
+import {
+  FORECASTING_MAX_ASSETS,
+  FORECASTING_TIME,
+  FORECASTING_TOLERANCE_MIN,
+  LITE_MAX_ASSETS,
+  LITE_WINDOWS,
+  RUN_WINDOWS,
+} from "./constants";
 import { rollUp } from "./selectors";
 import type { Asset, Day, Freshness, PipelineDataSource, Run, Status } from "./types";
 
@@ -80,6 +87,19 @@ const nearest = <T extends { m: number }>(slots: T[], at: number): T => {
   return best;
 };
 
+const FORECASTING_MIN = toMinutes(FORECASTING_TIME);
+
+/** Forecasting (~06:00, ≤4 assets) takes precedence; else Lite by count, else Full. */
+function classify(time: string, assetCount: number): Run["pipeline"] {
+  if (
+    assetCount <= FORECASTING_MAX_ASSETS &&
+    Math.abs(toMinutes(time) - FORECASTING_MIN) <= FORECASTING_TOLERANCE_MIN
+  ) {
+    return "forecasting";
+  }
+  return assetCount <= LITE_MAX_ASSETS ? "lite" : "full";
+}
+
 /**
  * Name a run's window by snapping its actual time to the nearest schedule slot
  * (a descriptive label, not a precise schedule claim). Full runs also carry the
@@ -90,6 +110,7 @@ function windowFor(
   pipeline: Run["pipeline"],
   time: string,
 ): { window: string; windowKey: string; runNo?: number } {
+  if (pipeline === "forecasting") return { window: "Forecasting", windowKey: "forecasting" };
   const at = toMinutes(time);
   if (pipeline === "lite") {
     const best = nearest(LITE_SLOTS, at);
@@ -149,9 +170,8 @@ export function auditToDays(res: AuditResponse): Day[] {
         message: String(row[iMsg]),
       });
     }
-    // Lite writes far fewer assets than Full — classify by count (clean gap).
-    const pipeline: Run["pipeline"] = assets.length <= LITE_MAX_ASSETS ? "lite" : "full";
     const time = ts.slice(11, 16);
+    const pipeline = classify(time, assets.length);
     runs.push({
       id: runId.slice(0, 8),
       pipeline,

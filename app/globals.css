@@ -675,6 +675,16 @@ tr.detail > td {
   background: rgba(45, 212, 191, 0.14);
   border-color: rgba(45, 212, 191, 0.28);
 }
+.pchip.forecasting {
+  color: #7c3aed;
+  background: rgba(124, 58, 237, 0.12);
+  border-color: rgba(124, 58, 237, 0.22);
+}
+:root[data-theme="dark"] .pchip.forecasting {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.14);
+  border-color: rgba(167, 139, 250, 0.28);
+}
 
 .empty {
   padding: 40px 18px;

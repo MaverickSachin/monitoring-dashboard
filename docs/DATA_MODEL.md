@@ -27,19 +27,19 @@ One materialization within a run.
 ## Pipeline
 
 ```ts
-type Pipeline = "full" | "lite";
+type Pipeline = "full" | "lite" | "forecasting";
 ```
 
-Two pipelines write to the **same** delta tables, so a run is tagged with which
-one produced it (`Rebalancing` / `Rebalancing Lite`):
+Three pipelines write to the **same** delta tables, so a run is tagged with which
+one produced it (`Rebalancing` / `Rebalancing Lite` / `Forecasting`):
 
 - **Full** (`leq_rebalancing_*`) — 7 fixed daily windows, materializes all ~20
   assets across every resource.
-- **Lite** (`leq_rebalancing_lite_*`) — frequent intraday refreshes (13/day),
-  materializes only the 5 source assets (`trades_aladdin`, `positions_aladdin`,
-  `portfolio_group_aladdin`, `cash_forecaster_export_schedule`, `policy_tree`).
-
-(Forecasting exists too but is out of scope for now.)
+- **Lite** (`leq_rebalancing_lite_*`) — frequent intraday refreshes, materializes
+  only the source-data subset (far fewer assets).
+- **Forecasting** (`leq_forecasting_*`) — once ~06:00 daily, only a couple of
+  assets. The live mapper classifies it by that signature (early-morning + tiny
+  asset count); Lite by asset count; Full otherwise.
 
 ## Run
 

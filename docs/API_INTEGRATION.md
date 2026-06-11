@@ -110,8 +110,9 @@ The schedules are deterministic, so the backend can tag every run:
 2. **Asset coverage** (corroboration): a write touching reconciliation/pricing
    must be Full (Lite only writes its 5-asset source subset).
 
-Do this in the API so the UI just reads `pipeline`. (Forecasting — 06:00 daily —
-is out of scope for now; tag it the same way when added.)
+Do this in the API so the UI just reads `pipeline`. A third pipeline,
+**Forecasting**, runs ~06:00 daily with only a couple of assets; the live mapper
+classifies it by that signature (early-morning + tiny asset count).
 
 ## Sourcing from Dagster / Databricks
 

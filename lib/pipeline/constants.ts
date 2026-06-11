@@ -18,7 +18,13 @@ export const STATUS_PHRASE: Record<Status, string> = {
 export const PIPELINE_LABEL: Record<Pipeline, string> = {
   full: "Rebalancing",
   lite: "Rebalancing Lite",
+  forecasting: "Forecasting",
 };
+
+/** Forecasting runs once early morning (~06:00 AEST) with only a couple of assets. */
+export const FORECASTING_TIME = "06:00";
+export const FORECASTING_TOLERANCE_MIN = 45;
+export const FORECASTING_MAX_ASSETS = 4;
 
 /**
  * The 7 daily Full-pipeline run windows, in schedule order — mirrors the
