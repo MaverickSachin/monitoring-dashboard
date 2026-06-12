@@ -26,7 +26,7 @@ UI renders live data.
 | --- | --- |
 | Choose mock vs. api | `lib/pipeline/data-source.ts` |
 | HTTP call, DTOs, mappers | `lib/pipeline/api-client.ts` |
-| Refresh cadence | `lib/pipeline/refresh-schedule.ts` + `components/AutoRefresh.tsx` |
+| Manual refresh | `components/ui/RefreshButton.tsx` |
 | Config & secrets | `lib/env.ts` / `.env.local` |
 
 ## Expected endpoint
@@ -92,22 +92,20 @@ Don't change the UI — change the **mappers** in `api-client.ts`:
 
 Adjust those and the rest of the app is unaffected.
 
-## Auto-refresh (schedule-aware)
+## Refresh (manual)
 
-The UI re-pulls data on a cadence tied to the pipeline schedules rather than
-blind polling — see `lib/pipeline/refresh-schedule.ts` and
-`components/AutoRefresh.tsx`:
+Data only re-pulls when the user clicks the **Refresh** button in the header —
+no polling, no background timers. See `components/ui/RefreshButton.tsx`:
 
-- It waits until just after each run is expected to finish (Full ≤10 min, Lite
-  5–10 min, + a short grace), then calls `router.refresh()`.
-- `router.refresh()` re-runs the **server** fetch and streams fresh data in,
-  preserving the user's open/search state. The Flask call and token stay
-  server-side; the browser only talks to the Next server (so `connect-src 'self'`
-  remains sufficient — no token in the client).
-- Tune the durations/grace in `refresh-schedule.ts` if a pipeline's runtime
-  changes.
+- The click calls `router.refresh()` inside a transition, which re-runs the
+  **server** fetch and streams fresh data in, preserving the user's open/search
+  state. The Flask call and token stay server-side; the browser only talks to
+  the Next server (so `connect-src 'self'` remains sufficient — no token in the
+  client).
+- `isPending` stays true for the whole round-trip, so the button shows a live
+  "Refreshing…" state.
 
-The runs fetch uses `cache: "no-store"`, so each refresh lands on the latest
+The runs fetch uses `cache: "no-store"`, so each click lands on the latest
 output instead of a cached copy.
 
 ## Tagging the pipeline (Full vs Lite)

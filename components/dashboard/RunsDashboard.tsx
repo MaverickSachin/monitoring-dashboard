@@ -2,6 +2,7 @@
 
 import { useRunsTable } from "@/hooks/useRunsTable";
 import { Dot } from "@/components/ui/Dot";
+import { RefreshButton } from "@/components/ui/RefreshButton";
 import { ThemeToggle } from "@/components/ui/ThemeToggle";
 import type { Day } from "@/lib/pipeline";
 import { HealthBanner } from "./HealthBanner";
@@ -40,6 +41,7 @@ export function RunsDashboard({ days }: RunsDashboardProps) {
             </span>
           </div>
           <ThemeToggle />
+          <RefreshButton />
         </div>
       </header>
 

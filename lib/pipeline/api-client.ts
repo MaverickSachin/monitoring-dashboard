@@ -219,9 +219,9 @@ export class ApiPipelineDataSource implements PipelineDataSource {
   }
 
   async getDays(): Promise<Day[]> {
-    // `no-store` so each scheduled refresh pulls the latest writes (cadence is
-    // driven by AutoRefresh). TLS trust for internal certs must be handled by
-    // the runtime (NODE_EXTRA_CA_CERTS) — never disable verification in code.
+    // `no-store` so each Refresh-button click pulls the latest writes rather
+    // than a cached copy. TLS trust for internal certs must be handled by the
+    // runtime (NODE_EXTRA_CA_CERTS) — never disable verification in code.
     const res = await fetch(`${this.cfg.baseUrl}${this.cfg.runsPath}`, {
       headers: {
         Accept: "application/json",

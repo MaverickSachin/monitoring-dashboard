@@ -59,7 +59,7 @@ docs/                architecture, API integration, security, data model
 ## Documentation
 
 - [Architecture](docs/ARCHITECTURE.md) — layers, data flow, design patterns
-- [API Integration](docs/API_INTEGRATION.md) — wiring the real Flask/REST backend + auto-refresh
+- [API Integration](docs/API_INTEGRATION.md) — wiring the real Flask/REST backend + manual refresh
 - [Security](docs/SECURITY.md) — CSP, headers, secret handling
 - [Data Model](docs/DATA_MODEL.md) — the domain types
 
