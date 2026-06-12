@@ -12,7 +12,7 @@ cp .env.example .env.local
 # .env.local
 PIPELINE_DATA_SOURCE=api
 PIPELINE_API_BASE_URL=https://pipeline-api.internal
-PIPELINE_API_RUNS_PATH=/runs
+PIPELINE_API_RUNS_PATH=/pipeline_run_audit_summary
 PIPELINE_API_TOKEN=<server-side token>
 PIPELINE_API_DAYS=20
 ```
@@ -39,35 +39,43 @@ Authorization: Bearer {PIPELINE_API_TOKEN}
 Accept: application/json
 ```
 
-Expected response — recent business days, **newest first**:
+Expected response — a **columnar** table, one row per asset materialization
+(the shape Databricks SQL returns). Rows may arrive in any order; the mapper
+groups them by `run_id` and `time_stamp`:
 
 ```jsonc
-[
-  {
-    "date": "2026-06-09",
-    "runs": [
-      {
-        "id": "3227d408",
-        "pipeline": "full",        // "full" | "lite"
-        "run_no": 3,               // full runs only; omit for lite
-        "window": "Market open",
-        "window_key": "market_open",
-        "scheduled_time": "09:00",
-        "date": "2026-06-09",
-        "assets": [
-          {
-            "name": "positions_aladdin",
-            "resource": "Aladdin",
-            "status": "success",      // "success" | "cached" | "failure"
-            "freshness": "Current",   // "Current" | "Cached" | "Stale"
-            "message": "Aladdin position data loaded"
-          }
-        ]
-      }
+{
+  "columns": [
+    "run_id", "time_stamp", "pipeline", "layer", "schema_name",
+    "table_name", "fully_qualified_name", "freshness", "row_count",
+    "cached_from_run_id", "status_message", "created_at"
+  ],
+  "result": [
+    [
+      "f315298f-4fcd-42ee-bac8-5e6b23cdfac9", // run_id
+      "2026-06-12T06:58:21.195+10:00",        // time_stamp (run-level)
+      "rebalancing_lite",                     // pipeline: rebalancing | rebalancing_lite | forecasting
+      "publication",                          // layer
+      "dp_leq_rebalancing_pub",               // schema_name
+      "positions_aladdin",                    // table_name  → asset name
+      "inv_dev.dp_leq_rebalancing_pub.positions_aladdin",
+      "current",                              // freshness: current | cached | stale  → status
+      "835",                                  // row_count
+      null,                                   // cached_from_run_id (source run is also in the message)
+      "Aladdin Positions loaded successfully",// status_message → asset message
+      "2026-06-12T06:54:59.785+10:00"         // created_at (per-asset)
     ]
-  }
-]
+  ],
+  "types": ["str", "datetime64[ns]", "str", "str", "str", "str", "str", "str", "str", "str", "str", "datetime64[ns]"]
+}
 ```
+
+The endpoint records everything the UI needs **directly** — no inference:
+
+- `pipeline` tags the run (`rebalancing` → Full, `rebalancing_lite` → Lite,
+  `forecasting` → Forecasting), so there is no count/time-based classifier.
+- `freshness` is the single source of run/asset status: `current` → success,
+  `cached` → cached (served from a prior run), `stale` → failure.
 
 Today's payload should include **only runs that have executed** — future runs
 simply aren't returned yet (the UI shows "N runs today" growing through the day).
@@ -76,9 +84,11 @@ simply aren't returned yet (the UI shows "N runs today" growing through the day)
 
 Don't change the UI — change the **mappers** in `api-client.ts`:
 
-- `AssetDTO`, `RunDTO`, `DayDTO` describe the wire format.
-- `toAsset` / `toRun` / `toDay` translate wire → domain (`Asset`/`Run`/`Day`).
-- `STATUS_FROM_API` maps backend status strings to the internal codes.
+- `RunAuditSummaryResponse` describes the columnar wire format (`columns`/`result`).
+- `runAuditSummaryToDays` groups rows → runs → days and builds the domain `Day[]`.
+- `STATUS_FROM_FRESHNESS` maps the `freshness` value to the internal status code;
+  `PIPELINE_FROM_API` maps the `pipeline` value to the domain pipeline.
+- `resourceFor` infers the upstream system from the asset (`table_name`).
 
 Adjust those and the rest of the app is unaffected.
 

@@ -1,18 +1,11 @@
 import "server-only";
 
-import {
-  FORECASTING_MAX_ASSETS,
-  FORECASTING_TIME,
-  FORECASTING_TOLERANCE_MIN,
-  LITE_MAX_ASSETS,
-  LITE_WINDOWS,
-  RUN_WINDOWS,
-} from "./constants";
+import { LITE_WINDOWS, RUN_WINDOWS } from "./constants";
 import { rollUp } from "./selectors";
 import type { Asset, Day, Freshness, PipelineDataSource, Run, Status } from "./types";
 
 /**
- * REST-API data source — backend-agnostic (the existing Flask `audit_data`
+ * REST-API data source — backend-agnostic (the `pipeline_run_audit_summary`
  * endpoint, or any HTTP service). The UI depends only on {@link PipelineDataSource};
  * this is the ONE place the backend is wired. Activate with
  * `PIPELINE_DATA_SOURCE=api` (see lib/env.ts and docs/API_INTEGRATION.md).
@@ -29,29 +22,50 @@ export interface ApiConfig {
 }
 
 // --- Wire format ---------------------------------------------------------
-// The audit endpoint returns a columnar table: one row per asset write.
-interface AuditResponse {
+// The `pipeline_run_audit_summary` endpoint returns a columnar table: one row
+// per asset materialization, with pipeline, freshness, and status message
+// recorded directly — no inference needed (see docs/API_INTEGRATION.md).
+interface RunAuditSummaryResponse {
   columns: string[];
   result: unknown[][];
   types: string[];
 }
 
-// --- Derivations (the response carries no resource/freshness) ------------
+// --- Derivations ---------------------------------------------------------
 
-const STATUS_FROM_AUDIT: Record<string, Status> = {
-  SUCCESS: "s",
-  CACHED: "c",
-  FAILURE: "f",
-  FAILED: "f",
-  ERROR: "f",
+/** Pipeline tag is recorded directly — no count/time heuristics needed. */
+const PIPELINE_FROM_API: Record<string, Run["pipeline"]> = {
+  rebalancing: "full",
+  rebalancing_lite: "lite",
+  forecasting: "forecasting",
 };
-const statusFromAudit = (value: string): Status =>
-  STATUS_FROM_AUDIT[value.toUpperCase()] ?? "f";
+const pipelineFromApi = (value: string): Run["pipeline"] =>
+  PIPELINE_FROM_API[value.toLowerCase()] ?? "full";
 
-const freshnessFor = (s: Status): Freshness =>
-  s === "f" ? "Stale" : s === "c" ? "Cached" : "Current";
+/**
+ * Status comes straight from the `freshness` column: `current` → success,
+ * `cached` → cached (served from a prior run), `stale` → failure. Anything
+ * unrecognised is treated as a failure so problems surface rather than hide.
+ */
+const STATUS_FROM_FRESHNESS: Record<string, Status> = {
+  current: "s",
+  cached: "c",
+  stale: "f",
+};
+const statusFromFreshness = (value: string): Status =>
+  STATUS_FROM_FRESHNESS[value.toLowerCase()] ?? "f";
 
-/** Resource inferred from the asset name (no resource column in the response). */
+/** Domain freshness label for a status (the wire value, normalised). */
+const FRESHNESS_LABEL: Record<Status, Freshness> = {
+  s: "Current",
+  c: "Cached",
+  f: "Stale",
+};
+
+/** Worst-wins ranking for collapsing duplicate writes of the same asset. */
+const STATUS_RANK: Record<Status, number> = { s: 0, c: 1, f: 2 };
+
+/** Resource inferred from the asset name (no dedicated resource column). */
 function resourceFor(name: string): string {
   const n = name.toLowerCase();
   if (n.endsWith("_aladdin")) return "Aladdin";
@@ -87,19 +101,6 @@ const nearest = <T extends { m: number }>(slots: T[], at: number): T => {
   return best;
 };
 
-const FORECASTING_MIN = toMinutes(FORECASTING_TIME);
-
-/** Forecasting (~06:00, ≤4 assets) takes precedence; else Lite by count, else Full. */
-function classify(time: string, assetCount: number): Run["pipeline"] {
-  if (
-    assetCount <= FORECASTING_MAX_ASSETS &&
-    Math.abs(toMinutes(time) - FORECASTING_MIN) <= FORECASTING_TOLERANCE_MIN
-  ) {
-    return "forecasting";
-  }
-  return assetCount <= LITE_MAX_ASSETS ? "lite" : "full";
-}
-
 /**
  * Name a run's window by snapping its actual time to the nearest schedule slot
  * (a descriptive label, not a precise schedule claim). Full runs also carry the
@@ -124,23 +125,24 @@ function windowFor(
     : { window: "Rebalancing run", windowKey: "full" };
 }
 
-// --- Transform: audit rows -> domain ------------------------------------
+// --- Transform: run-audit-summary rows -> domain ------------------------
 
-/** Group rows by run_id → runs, classify pipeline, then group by date → days. */
-export function auditToDays(res: AuditResponse): Day[] {
+/** Group rows by run_id → runs (pipeline read directly), then by date → days. */
+export function runAuditSummaryToDays(res: RunAuditSummaryResponse): Day[] {
   if (!res || !Array.isArray(res.columns) || !Array.isArray(res.result)) {
-    throw new Error("Unexpected audit response: expected { columns, result }");
+    throw new Error("Unexpected API response: expected { columns, result }");
   }
   const col = (name: string) => {
     const i = res.columns.indexOf(name);
-    if (i < 0) throw new Error(`Audit response is missing the "${name}" column`);
+    if (i < 0) throw new Error(`API response is missing the "${name}" column`);
     return i;
   };
   const iRun = col("run_id");
   const iTs = col("time_stamp");
-  const iName = col("friendly_name");
-  const iMsg = col("message");
-  const iType = col("message_type");
+  const iPipeline = col("pipeline");
+  const iName = col("table_name");
+  const iFresh = col("freshness");
+  const iMsg = col("status_message");
 
   const rowsByRun = new Map<string, unknown[][]>();
   for (const row of res.result) {
@@ -153,25 +155,26 @@ export function auditToDays(res: AuditResponse): Day[] {
   const runs: Run[] = [];
   for (const [runId, group] of rowsByRun) {
     let ts = String(group[0][iTs]);
-    const seen = new Set<string>();
-    const assets: Asset[] = [];
+    // Collapse duplicate writes of an asset, keeping the worst status.
+    const byName = new Map<string, Asset>();
     for (const row of group) {
       const t = String(row[iTs]);
       if (t < ts) ts = t;
       const name = String(row[iName]);
-      if (seen.has(name)) continue; // collapse duplicate writes of an asset
-      seen.add(name);
-      const status = statusFromAudit(String(row[iType]));
-      assets.push({
+      const status = statusFromFreshness(String(row[iFresh]));
+      const existing = byName.get(name);
+      if (existing && STATUS_RANK[existing.status] >= STATUS_RANK[status]) continue;
+      byName.set(name, {
         name,
         resource: resourceFor(name),
         status,
-        freshness: freshnessFor(status),
+        freshness: FRESHNESS_LABEL[status],
         message: String(row[iMsg]),
       });
     }
+    const assets = [...byName.values()];
     const time = ts.slice(11, 16);
-    const pipeline = classify(time, assets.length);
+    const pipeline = pipelineFromApi(String(group[0][iPipeline]));
     runs.push({
       id: runId.slice(0, 8),
       pipeline,
@@ -234,6 +237,6 @@ export class ApiPipelineDataSource implements PipelineDataSource {
       throw new Error(`Pipeline API responded ${res.status} ${res.statusText}`);
     }
 
-    return auditToDays((await res.json()) as AuditResponse);
+    return runAuditSummaryToDays((await res.json()) as RunAuditSummaryResponse);
   }
 }
