@@ -12,7 +12,6 @@ export type Freshness = "Current" | "Cached" | "Stale";
 /** A single asset materialized within a run. */
 export interface Asset {
   name: string;
-  resource: string; // upstream system, e.g. Aladdin | IDM | Bloomberg | Internal
   status: Status;
   freshness: Freshness;
   message: string; // data status message

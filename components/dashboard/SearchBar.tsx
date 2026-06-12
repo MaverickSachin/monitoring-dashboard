@@ -3,7 +3,7 @@ interface SearchBarProps {
   onChange: (value: string) => void;
 }
 
-/** Free-text filter over run id, window, asset name, resource, and note. */
+/** Free-text filter over run id, window, pipeline, asset name, and message. */
 export function SearchBar({ query, onChange }: SearchBarProps) {
   return (
     <label className="search">
@@ -13,7 +13,7 @@ export function SearchBar({ query, onChange }: SearchBarProps) {
       <input
         value={query}
         onChange={(e) => onChange(e.target.value)}
-        placeholder="Search run, window, asset, resource, message..."
+        placeholder="Search run, window, asset, message..."
         aria-label="Search runs"
       />
       {query && (

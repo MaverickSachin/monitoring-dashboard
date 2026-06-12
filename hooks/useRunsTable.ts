@@ -13,10 +13,7 @@ const matches = (run: Run, q: string) =>
   run.window.toLowerCase().includes(q) ||
   PIPELINE_LABEL[run.pipeline].toLowerCase().includes(q) ||
   run.assets.some(
-    (a) =>
-      a.name.toLowerCase().includes(q) ||
-      a.resource.toLowerCase().includes(q) ||
-      a.message.toLowerCase().includes(q),
+    (a) => a.name.toLowerCase().includes(q) || a.message.toLowerCase().includes(q),
   );
 
 /**

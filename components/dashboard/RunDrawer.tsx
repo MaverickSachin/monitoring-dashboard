@@ -52,10 +52,7 @@ export function RunDrawer({ run, onClose }: RunDrawerProps) {
                 <div className="darow" key={a.name}>
                   <Dot status={a.status} size={14} title={STATUS_LABEL[a.status]} />
                   <div>
-                    <div className="an">
-                      {a.name}
-                      <span className="res">{a.resource}</span>
-                    </div>
+                    <div className="an">{a.name}</div>
                     <div className={`ameta f-${a.status}`}>Data freshness · {a.freshness}</div>
                     <div className="anote">{a.message}</div>
                   </div>

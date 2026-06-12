@@ -18,8 +18,7 @@ One materialization within a run.
 
 | Field | Type | Notes |
 | --- | --- | --- |
-| `name` | `string` | asset key, e.g. `positions_aladdin` |
-| `resource` | `string` | upstream system: Aladdin / IDM / Bloomberg / Internal |
+| `name` | `string` | UI display name, mapped from the raw `table_name` via `ASSET_DISPLAY` |
 | `status` | `Status` | materialization outcome |
 | `freshness` | `Freshness` | `"Current"` \| `"Cached"` \| `"Stale"` |
 | `message` | `string` | data status message |

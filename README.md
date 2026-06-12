@@ -36,8 +36,8 @@ config change, no code edits required.
   dots (click one for details).
 - **Day-grouped runs table** — every run from both pipelines, tagged with a
   **Pipeline** column; collapsible days; click a run to expand its per-asset
-  breakdown (asset · resource · data freshness · status message).
-- **Search** across run id, window, pipeline, asset, resource, and note.
+  breakdown (asset · data freshness · status message).
+- **Search** across run id, window, pipeline, asset, and message.
 - **Pagination** — 5 days per page, with older history behind Newer/Older.
 - **Light / dark mode** — persisted, applied before first paint (no flash).
 

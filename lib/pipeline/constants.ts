@@ -70,3 +70,47 @@ export const LITE_ASSET_KEYS: readonly string[] = [
  * threshold (well inside the gap); Full otherwise.
  */
 export const LITE_MAX_ASSETS = 8;
+
+/**
+ * UI display name per asset, keyed by the raw `table_name` the API (and mock)
+ * emit. The wire names are terse table identifiers; this is the one place that
+ * maps them to the labels traders read. Unmapped keys fall back to a title-cased
+ * name (see {@link displayAsset}).
+ */
+export const ASSET_DISPLAY: Record<string, string> = {
+  recs_aladdin: "Aladdin + IDM Reconciliation",
+  policy_tree: "IDM Policy Tree",
+  positions_aladdin: "Aladdin Positions",
+  trades_aladdin: "Aladdin Trades",
+  calculations: "Rebalancing Calculations",
+  calculations_trace: "Rebalancing Calculations Trace",
+  portfolio_group_aladdin: "Aladdin Portfolio Group",
+  positions_idm: "IDM Positions",
+  cash_forecaster_export_schedule: "Cash Forecaster Export Schedule",
+  policytree_diffs: "IDM Policy Tree Difference",
+  pricing_bloomberg: "Darkstar/Bloomberg Pricing",
+  positions_notional_aladdin: "Aladdin Notional Positions",
+  dsu_board_taa: "DSU Board TAA",
+  dsu_board_eee: "DSU Board EEE",
+  dsu_runway_range: "DSU Runway Range",
+  dsu_daa: "DSU DAA",
+  dsu_drift_targets: "DSU Drift Targets",
+  dsu_daa_eee: "DSU DAA EEE",
+  dsu_ic_taa: "DSU IC TAA",
+  benchmark_weights: "IDM Benchmark Weights",
+  positions_fx_aladdin: "Aladdin FX Positions",
+};
+
+/** Title-case an unmapped key: `positions_fx_aladdin` → "Positions Fx Aladdin". */
+function humanize(key: string): string {
+  return key
+    .split(/[_\s]+/)
+    .filter(Boolean)
+    .map((w) => w[0].toUpperCase() + w.slice(1))
+    .join(" ");
+}
+
+/** Resolve an asset's UI display name from its raw `table_name`. */
+export function displayAsset(key: string): string {
+  return ASSET_DISPLAY[key] ?? humanize(key);
+}

@@ -1,6 +1,6 @@
 import "server-only";
 
-import { LITE_WINDOWS, RUN_WINDOWS } from "./constants";
+import { displayAsset, LITE_WINDOWS, RUN_WINDOWS } from "./constants";
 import { rollUp } from "./selectors";
 import type { Asset, Day, Freshness, PipelineDataSource, Run, Status } from "./types";
 
@@ -64,15 +64,6 @@ const FRESHNESS_LABEL: Record<Status, Freshness> = {
 
 /** Worst-wins ranking for collapsing duplicate writes of the same asset. */
 const STATUS_RANK: Record<Status, number> = { s: 0, c: 1, f: 2 };
-
-/** Resource inferred from the asset name (no dedicated resource column). */
-function resourceFor(name: string): string {
-  const n = name.toLowerCase();
-  if (n.endsWith("_aladdin")) return "Aladdin";
-  if (n.includes("idm")) return "IDM";
-  if (n.includes("bloomberg")) return "Bloomberg";
-  return "Internal";
-}
 
 const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 const WEEKDAYS = [
@@ -160,13 +151,12 @@ export function runAuditSummaryToDays(res: RunAuditSummaryResponse): Day[] {
     for (const row of group) {
       const t = String(row[iTs]);
       if (t < ts) ts = t;
-      const name = String(row[iName]);
+      const rawName = String(row[iName]);
       const status = statusFromFreshness(String(row[iFresh]));
-      const existing = byName.get(name);
+      const existing = byName.get(rawName);
       if (existing && STATUS_RANK[existing.status] >= STATUS_RANK[status]) continue;
-      byName.set(name, {
-        name,
-        resource: resourceFor(name),
+      byName.set(rawName, {
+        name: displayAsset(rawName),
         status,
         freshness: FRESHNESS_LABEL[status],
         message: String(row[iMsg]),

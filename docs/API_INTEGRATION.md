@@ -88,7 +88,7 @@ Don't change the UI — change the **mappers** in `api-client.ts`:
 - `runAuditSummaryToDays` groups rows → runs → days and builds the domain `Day[]`.
 - `STATUS_FROM_FRESHNESS` maps the `freshness` value to the internal status code;
   `PIPELINE_FROM_API` maps the `pipeline` value to the domain pipeline.
-- `resourceFor` infers the upstream system from the asset (`table_name`).
+- `displayAsset` (in `constants.ts`) maps the raw `table_name` to its UI name.
 
 Adjust those and the rest of the app is unaffected.
 
@@ -124,7 +124,7 @@ classifies it by that signature (early-morning + tiny asset count).
 
 ## Sourcing from Dagster / Databricks
 
-The per-asset rows (`resource`, `status`, `freshness`, `message`) come from the
+The per-asset rows (`table_name`, `status`, `freshness`, `message`) come from the
 Databricks delta table the pipeline writes. The Flask service joins the Dagster
 run metadata (run window, schedule time) with that table and returns the shape
 above. `run_no` / `window_key` correspond to the schedule `run_window` tags

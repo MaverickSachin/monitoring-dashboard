@@ -12,7 +12,6 @@ export function AssetDetailTable({ assets }: AssetDetailTableProps) {
       <div className="ahead">
         <span />
         <span>Asset</span>
-        <span>Resource</span>
         <span>Data Freshness</span>
         <span>Data Status Message</span>
       </div>
@@ -20,7 +19,6 @@ export function AssetDetailTable({ assets }: AssetDetailTableProps) {
         <div className="arow" key={a.name}>
           <Dot status={a.status} size={13} title={STATUS_LABEL[a.status]} />
           <span className="an">{a.name}</span>
-          <span className="res">{a.resource}</span>
           <span className={`afresh f-${a.status}`}>{a.freshness}</span>
           <span className="anote">{a.message}</span>
         </div>

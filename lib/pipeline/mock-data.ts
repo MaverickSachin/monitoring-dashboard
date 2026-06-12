@@ -5,32 +5,37 @@
  * client hydration always agree. Replace this source with the REST API client
  * by setting PIPELINE_DATA_SOURCE=api — see lib/pipeline/data-source.ts.
  */
-import { LITE_ASSET_KEYS, LITE_WINDOWS, RUN_WINDOWS } from "./constants";
+import { displayAsset, LITE_ASSET_KEYS, LITE_WINDOWS, RUN_WINDOWS } from "./constants";
 import { rollUp } from "./selectors";
 import type { Asset, Day, Freshness, Run, Status } from "./types";
 
-/** Assets a full run materializes, in pipeline order, with their resource. */
-const ASSET_TEMPLATE: ReadonlyArray<[name: string, resource: string, message: string]> = [
-  ["trades_aladdin", "Aladdin", "Trade data loaded"],
-  ["positions_aladdin", "Aladdin", "Aladdin position data loaded"],
-  ["portfolio_group_aladdin", "Aladdin", "Aladdin portfolio group data loaded"],
-  ["cash_forecaster_export_schedule", "Aladdin", "Cash forecaster export schedule loaded"],
-  ["benchmark_constituents", "Bloomberg", "Benchmark constituents refreshed"],
-  ["fx_rates", "Bloomberg", "FX rates loaded"],
-  ["security_master", "IDM", "Security master synced"],
-  ["nav_snapshot", "IDM", "NAV snapshot captured"],
-  ["corporate_actions", "IDM", "Corporate actions applied"],
-  ["pricing_eod", "Bloomberg", "EOD pricing loaded"],
-  ["policy_tree", "Internal", "Policy tree evaluated"],
-  ["rebalance_orders", "Internal", "Rebalance orders generated"],
-  ["compliance_check", "Internal", "Pre-trade compliance passed"],
-  ["risk_metrics", "Internal", "Risk metrics computed"],
-  ["order_export", "Aladdin", "Orders exported to Aladdin"],
-  ["reconciliation_idm", "IDM", "IDM reconciliation complete"],
-  ["cash_ladder", "Aladdin", "Cash ladder rebuilt"],
-  ["dividend_accruals", "IDM", "Dividend accruals updated"],
-  ["settlement_status", "IDM", "Settlement status reconciled"],
-  ["audit_log", "Internal", "Audit log written"],
+/**
+ * Assets a full run materializes, in pipeline order, as `[table_name, message]`.
+ * The keys mirror the real pipeline tables; the UI display name is resolved from
+ * each key via {@link displayAsset}.
+ */
+const ASSET_TEMPLATE: ReadonlyArray<[key: string, message: string]> = [
+  ["trades_aladdin", "Aladdin Trades loaded successfully"],
+  ["positions_aladdin", "Aladdin Positions loaded successfully"],
+  ["portfolio_group_aladdin", "Aladdin Portfolio Groups loaded successfully"],
+  ["positions_notional_aladdin", "Aladdin Notional Positions loaded successfully"],
+  ["positions_fx_aladdin", "Aladdin FX Positions loaded successfully"],
+  ["positions_idm", "IDM Positions loaded successfully"],
+  ["recs_aladdin", "Aladdin + IDM reconciliation complete"],
+  ["pricing_bloomberg", "Darkstar / Bloomberg pricing loaded successfully"],
+  ["benchmark_weights", "IDM Benchmark Weights loaded successfully"],
+  ["policy_tree", "IDM Policy Tree loaded successfully"],
+  ["policytree_diffs", "IDM Policy Tree differences computed"],
+  ["cash_forecaster_export_schedule", "Cash Forecaster Export Schedule loaded successfully"],
+  ["calculations", "Rebalancing calculations loaded"],
+  ["calculations_trace", "Rebalancing calculations trace loaded"],
+  ["dsu_board_taa", "DSU Board TAA loaded successfully"],
+  ["dsu_board_eee", "DSU Board EEE loaded successfully"],
+  ["dsu_runway_range", "DSU Runway Range loaded successfully"],
+  ["dsu_daa", "DSU DAA loaded successfully"],
+  ["dsu_drift_targets", "DSU Drift Targets loaded successfully"],
+  ["dsu_daa_eee", "DSU DAA EEE loaded successfully"],
+  ["dsu_ic_taa", "DSU IC TAA loaded successfully"],
 ];
 
 const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -81,10 +86,9 @@ function recentBusinessDays(): { date: string; dow: string; tag: string }[] {
 // Lite refreshes only the source-data subset of the full template.
 const LITE_TEMPLATE = ASSET_TEMPLATE.filter(([name]) => LITE_ASSET_KEYS.includes(name));
 
-function buildAssets(template: ReadonlyArray<[string, string, string]>): Asset[] {
-  return template.map(([name, resource, message]) => ({
-    name,
-    resource,
+function buildAssets(template: ReadonlyArray<[string, string]>): Asset[] {
+  return template.map(([key, message]) => ({
+    name: displayAsset(key),
     message,
     status: "s",
     freshness: "Current",
@@ -95,18 +99,20 @@ function buildAssets(template: ReadonlyArray<[string, string, string]>): Asset[]
 function applyFullScenario(assets: Asset[], dayIndex: number, windowIndex: number): void {
   if (dayIndex === 0 && windowIndex === 3) {
     assets.forEach((a, i) => i >= 2 && (a.status = "c"));
+    assets[9].message =
+      "IDM Policy Tree served from cache (upstream: idm/pivoted_policy_trees, run id: f315298f)";
   } else if (dayIndex === 1 && windowIndex === 5) {
     assets[1].status = "f";
     assets[1].message = "Aladdin position feed timed out (retry 3/3)";
-    assets[14].status = "f";
-    assets[14].message = "Skipped — upstream positions failed";
+    assets[6].status = "f";
+    assets[6].message = "Skipped — upstream Aladdin positions failed";
   } else if (dayIndex === 2 && windowIndex === 2) {
     assets.forEach((a) => (a.status = "c"));
   } else if (dayIndex === 3 && windowIndex === 4) {
     assets[9].status = "c";
   } else if (dayIndex === 4 && windowIndex === 6) {
     assets[7].status = "f";
-    assets[7].message = "NAV snapshot missing EOD prices";
+    assets[7].message = "Darkstar / Bloomberg pricing feed delayed past cut-off";
     assets[9].status = "c";
   } else if (dayIndex >= 5) {
     const h = dayIndex * 31 + windowIndex * 7;
@@ -136,7 +142,7 @@ function buildRun(
     windowKey: string;
     time: string;
     date: string;
-    template: ReadonlyArray<[string, string, string]>;
+    template: ReadonlyArray<[string, string]>;
     scenario: (assets: Asset[]) => void;
   },
 ): Run {
