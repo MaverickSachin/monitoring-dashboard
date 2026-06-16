@@ -2,6 +2,7 @@
 
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
+import { Button } from "ffma-dse-react-ui";
 
 /**
  * Manual data refresh — the only way the dashboard re-pulls data (no polling,
@@ -11,6 +12,9 @@ import { useRouter } from "next/navigation";
  * the call in a transition keeps `isPending` true for the whole round-trip, so
  * the button can show a live "Refreshing…" state. The backend call and token
  * stay server-side.
+ *
+ * The button itself is the shared FFMA `Button` from `ffma-dse-react-ui`; the
+ * tooltip wrapper stays local since the library doesn't provide one.
  */
 export function RefreshButton() {
   const router = useRouter();
@@ -24,19 +28,18 @@ export function RefreshButton() {
 
   return (
     <span className="tipwrap" data-tip="Click to load the latest pipeline data">
-      <button
+      <Button
         type="button"
-        className="refreshbtn"
+        variant="primary"
+        size="medium"
         onClick={refresh}
+        loading={isPending}
         disabled={isPending}
         aria-label="Refresh — load the latest pipeline data"
         aria-busy={isPending}
       >
-        <span className={`ric${isPending ? " spin" : ""}`} aria-hidden="true">
-          ↻
-        </span>
-        <span className="rlabel">{isPending ? "Refreshing…" : "Refresh"}</span>
-      </button>
+        {isPending ? "Refreshing…" : "Refresh"}
+      </Button>
     </span>
   );
 }
