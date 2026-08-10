@@ -1,0 +1,3204 @@
+{
+    "columns": [
+        "run_id",
+        "time_stamp",
+        "friendly_name",
+        "message",
+        "message_type",
+        "status"
+    ],
+    "result": [
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "4ce78ab6",
+            "2026-06-11T17:09:22",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9efa1ff2",
+            "2026-06-11T16:07:19",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7f63782e",
+            "2026-06-11T15:07:51",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "93a7ceeb",
+            "2026-06-11T14:36:14",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "93a7ceeb",
+            "2026-06-11T14:36:14",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "93a7ceeb",
+            "2026-06-11T14:36:14",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "93a7ceeb",
+            "2026-06-11T14:36:14",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "93a7ceeb",
+            "2026-06-11T14:36:14",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bc0cbf19",
+            "2026-06-11T14:08:39",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bc0cbf19",
+            "2026-06-11T14:08:39",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bc0cbf19",
+            "2026-06-11T14:08:39",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bc0cbf19",
+            "2026-06-11T14:08:39",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bc0cbf19",
+            "2026-06-11T14:08:39",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e8c5d3ad",
+            "2026-06-11T13:36:51",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e8c5d3ad",
+            "2026-06-11T13:36:51",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e8c5d3ad",
+            "2026-06-11T13:36:51",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e8c5d3ad",
+            "2026-06-11T13:36:51",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "97e22a1a",
+            "2026-06-11T13:06:32",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "97e22a1a",
+            "2026-06-11T13:06:32",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "97e22a1a",
+            "2026-06-11T13:06:32",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "97e22a1a",
+            "2026-06-11T13:06:32",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "cce8cfc7",
+            "2026-06-11T12:37:15",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "cce8cfc7",
+            "2026-06-11T12:37:15",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "cce8cfc7",
+            "2026-06-11T12:37:15",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "cce8cfc7",
+            "2026-06-11T12:37:15",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "cce8cfc7",
+            "2026-06-11T12:37:15",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "947c8535",
+            "2026-06-11T12:07:02",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "947c8535",
+            "2026-06-11T12:07:02",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "947c8535",
+            "2026-06-11T12:07:02",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "947c8535",
+            "2026-06-11T12:07:02",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "947c8535",
+            "2026-06-11T12:07:02",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "20e028e7",
+            "2026-06-11T11:37:08",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "20e028e7",
+            "2026-06-11T11:37:08",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "20e028e7",
+            "2026-06-11T11:37:08",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "20e028e7",
+            "2026-06-11T11:37:08",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "20e028e7",
+            "2026-06-11T11:37:08",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "644ad88e",
+            "2026-06-11T11:06:48",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "644ad88e",
+            "2026-06-11T11:06:48",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "644ad88e",
+            "2026-06-11T11:06:48",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "644ad88e",
+            "2026-06-11T11:06:48",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "644ad88e",
+            "2026-06-11T11:06:48",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "319178a3",
+            "2026-06-11T10:38:04",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e5bccb2d",
+            "2026-06-11T10:21:53",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e5bccb2d",
+            "2026-06-11T10:21:53",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e5bccb2d",
+            "2026-06-11T10:21:53",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e5bccb2d",
+            "2026-06-11T10:21:53",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e5bccb2d",
+            "2026-06-11T10:21:53",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a4a72dce",
+            "2026-06-11T10:06:37",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a4a72dce",
+            "2026-06-11T10:06:37",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a4a72dce",
+            "2026-06-11T10:06:37",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a4a72dce",
+            "2026-06-11T10:06:37",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a4a72dce",
+            "2026-06-11T10:06:37",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "df57b04d",
+            "2026-06-11T09:52:01",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "df57b04d",
+            "2026-06-11T09:52:01",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "df57b04d",
+            "2026-06-11T09:52:01",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "df57b04d",
+            "2026-06-11T09:52:01",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "df57b04d",
+            "2026-06-11T09:52:01",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8382f674",
+            "2026-06-11T09:36:50",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8382f674",
+            "2026-06-11T09:36:50",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8382f674",
+            "2026-06-11T09:36:50",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8382f674",
+            "2026-06-11T09:36:50",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8382f674",
+            "2026-06-11T09:36:50",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e4bd01a8",
+            "2026-06-11T09:22:01",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e4bd01a8",
+            "2026-06-11T09:22:01",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e4bd01a8",
+            "2026-06-11T09:22:01",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e4bd01a8",
+            "2026-06-11T09:22:01",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e4bd01a8",
+            "2026-06-11T09:22:01",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "24f309ad",
+            "2026-06-11T09:08:13",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "ebbaadbe",
+            "2026-06-11T07:08:08",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9906633f",
+            "2026-06-11T06:02:00",
+            "benchmark_weights",
+            "Benchmark weights loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "9906633f",
+            "2026-06-11T06:02:00",
+            "positions_fx_aladdin",
+            "Aladdin FX position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "1e598026",
+            "2026-06-11T05:57:11",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "61e68505",
+            "2026-06-11T00:50:35",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e97547de",
+            "2026-06-10T17:23:32",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "350f9e83",
+            "2026-06-10T16:07:47",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a1004b3d",
+            "2026-06-10T15:10:01",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "b43d5f63",
+            "2026-06-10T14:36:25",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "b43d5f63",
+            "2026-06-10T14:36:25",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "b43d5f63",
+            "2026-06-10T14:36:25",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "b43d5f63",
+            "2026-06-10T14:36:25",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "b43d5f63",
+            "2026-06-10T14:36:25",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "3a02a64c",
+            "2026-06-10T14:06:26",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "3a02a64c",
+            "2026-06-10T14:06:26",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "3a02a64c",
+            "2026-06-10T14:06:26",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "3a02a64c",
+            "2026-06-10T14:06:26",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "3a02a64c",
+            "2026-06-10T14:06:26",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bd3c7686",
+            "2026-06-10T13:36:06",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bd3c7686",
+            "2026-06-10T13:36:06",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bd3c7686",
+            "2026-06-10T13:36:06",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bd3c7686",
+            "2026-06-10T13:36:06",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "bd3c7686",
+            "2026-06-10T13:36:06",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "5f31bd2c",
+            "2026-06-10T13:06:53",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "5f31bd2c",
+            "2026-06-10T13:06:53",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "5f31bd2c",
+            "2026-06-10T13:06:53",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "5f31bd2c",
+            "2026-06-10T13:06:53",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7e32aab6",
+            "2026-06-10T12:37:06",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7e32aab6",
+            "2026-06-10T12:37:06",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7e32aab6",
+            "2026-06-10T12:37:06",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "7e32aab6",
+            "2026-06-10T12:37:06",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "704a0715",
+            "2026-06-10T12:07:16",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "704a0715",
+            "2026-06-10T12:07:16",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "704a0715",
+            "2026-06-10T12:07:16",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "704a0715",
+            "2026-06-10T12:07:16",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "704a0715",
+            "2026-06-10T12:07:16",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8a9663e5",
+            "2026-06-10T11:37:04",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8a9663e5",
+            "2026-06-10T11:37:04",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8a9663e5",
+            "2026-06-10T11:37:04",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8a9663e5",
+            "2026-06-10T11:37:04",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8a9663e5",
+            "2026-06-10T11:37:04",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a2dca8bf",
+            "2026-06-10T11:06:41",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a2dca8bf",
+            "2026-06-10T11:06:41",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a2dca8bf",
+            "2026-06-10T11:06:41",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a2dca8bf",
+            "2026-06-10T11:06:41",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a2dca8bf",
+            "2026-06-10T11:06:41",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "0e06eddb",
+            "2026-06-10T10:38:04",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e320cefc",
+            "2026-06-10T10:22:01",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e320cefc",
+            "2026-06-10T10:22:01",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e320cefc",
+            "2026-06-10T10:22:01",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e320cefc",
+            "2026-06-10T10:22:01",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "e320cefc",
+            "2026-06-10T10:22:01",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "57a96d8d",
+            "2026-06-10T10:06:49",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "57a96d8d",
+            "2026-06-10T10:06:49",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "57a96d8d",
+            "2026-06-10T10:06:49",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "57a96d8d",
+            "2026-06-10T10:06:49",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "57a96d8d",
+            "2026-06-10T10:06:49",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a0ae8423",
+            "2026-06-10T09:52:19",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a0ae8423",
+            "2026-06-10T09:52:19",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a0ae8423",
+            "2026-06-10T09:52:19",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a0ae8423",
+            "2026-06-10T09:52:19",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "a0ae8423",
+            "2026-06-10T09:52:19",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "726e3f98",
+            "2026-06-10T09:37:09",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "726e3f98",
+            "2026-06-10T09:37:09",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "726e3f98",
+            "2026-06-10T09:37:09",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "726e3f98",
+            "2026-06-10T09:37:09",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "43057537",
+            "2026-06-10T09:22:25",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "43057537",
+            "2026-06-10T09:22:25",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "43057537",
+            "2026-06-10T09:22:25",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "43057537",
+            "2026-06-10T09:22:25",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "43057537",
+            "2026-06-10T09:22:25",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "d98b7614",
+            "2026-06-10T09:15:29",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "c90ed55d",
+            "2026-06-10T07:10:14",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8cb4f9f5",
+            "2026-06-10T06:10:28",
+            "benchmark_weights",
+            "Benchmark weights loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "8cb4f9f5",
+            "2026-06-10T06:10:28",
+            "positions_fx_aladdin",
+            "Aladdin FX position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS",
+            0
+        ],
+        [
+            "2a2473f0",
+            "2026-06-10T00:49:42",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS",
+            0
+        ]
+    ],
+    "types": [
+        "str",
+        "datetime64[ns]",
+        "str",
+        "str",
+        "str",
+        "int64"
+    ]
+}

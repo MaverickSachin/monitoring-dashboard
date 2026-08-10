@@ -1,0 +1,2286 @@
+{
+    "columns": [
+        "run_id",
+        "time_stamp",
+        "friendly_name",
+        "message",
+        "message_type"
+    ],
+    "result": [
+        [
+            "09a6254a-bfe8-4b4f-821a-ec10672388a6",
+            "2026-06-09T09:52:58.768000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "09a6254a-bfe8-4b4f-821a-ec10672388a6",
+            "2026-06-09T09:52:58.768000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "09a6254a-bfe8-4b4f-821a-ec10672388a6",
+            "2026-06-09T09:52:58.768000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "09a6254a-bfe8-4b4f-821a-ec10672388a6",
+            "2026-06-09T09:52:58.768000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "180b82f3-ccfd-44b4-b39a-7bf2254d6595",
+            "2026-06-09T09:22:29.799000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "180b82f3-ccfd-44b4-b39a-7bf2254d6595",
+            "2026-06-09T09:22:29.799000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "180b82f3-ccfd-44b4-b39a-7bf2254d6595",
+            "2026-06-09T09:22:29.799000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "180b82f3-ccfd-44b4-b39a-7bf2254d6595",
+            "2026-06-09T09:22:29.799000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2a2473f0-fab4-468c-bb60-4e67cb1b48c6",
+            "2026-06-10T00:49:42.381000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2c8461f6-01a4-4522-bad0-8307184168ed",
+            "2026-06-09T10:24:21.553000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2c8461f6-01a4-4522-bad0-8307184168ed",
+            "2026-06-09T10:24:21.553000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2c8461f6-01a4-4522-bad0-8307184168ed",
+            "2026-06-09T10:24:21.553000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2c8461f6-01a4-4522-bad0-8307184168ed",
+            "2026-06-09T10:24:21.553000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2f367ef0-bb84-4dad-b757-c5926e6949fc",
+            "2026-06-09T12:39:53.130000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2f367ef0-bb84-4dad-b757-c5926e6949fc",
+            "2026-06-09T12:39:53.130000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2f367ef0-bb84-4dad-b757-c5926e6949fc",
+            "2026-06-09T12:39:53.130000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "2f367ef0-bb84-4dad-b757-c5926e6949fc",
+            "2026-06-09T12:39:53.130000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "36e7cd75-8419-4d3f-ae6c-09dc1553bd71",
+            "2026-06-09T09:37:25.350000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "36e7cd75-8419-4d3f-ae6c-09dc1553bd71",
+            "2026-06-09T09:37:25.350000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "36e7cd75-8419-4d3f-ae6c-09dc1553bd71",
+            "2026-06-09T09:37:25.350000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "36e7cd75-8419-4d3f-ae6c-09dc1553bd71",
+            "2026-06-09T09:37:25.350000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "43057537-6b46-4f37-87ea-a0336b064a17",
+            "2026-06-10T09:22:25.885000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "43057537-6b46-4f37-87ea-a0336b064a17",
+            "2026-06-10T09:22:25.885000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "43057537-6b46-4f37-87ea-a0336b064a17",
+            "2026-06-10T09:22:25.885000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "43057537-6b46-4f37-87ea-a0336b064a17",
+            "2026-06-10T09:22:25.885000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "43057537-6b46-4f37-87ea-a0336b064a17",
+            "2026-06-10T09:22:25.885000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "57a96d8d-f760-4448-b222-7a18f45cb1d8",
+            "2026-06-10T10:06:49.585000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "57a96d8d-f760-4448-b222-7a18f45cb1d8",
+            "2026-06-10T10:06:49.585000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "57a96d8d-f760-4448-b222-7a18f45cb1d8",
+            "2026-06-10T10:06:49.585000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "57a96d8d-f760-4448-b222-7a18f45cb1d8",
+            "2026-06-10T10:06:49.585000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "57a96d8d-f760-4448-b222-7a18f45cb1d8",
+            "2026-06-10T10:06:49.585000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "60b56356-04d8-4963-9e82-5a4b521bd9ff",
+            "2026-06-09T17:07:54.029000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "6b75951d-94c9-431a-9ea4-97253f593c7a",
+            "2026-06-09T07:09:56.491000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "726e3f98-6e0a-4bfd-9922-3ab1de34f7e1",
+            "2026-06-10T09:37:09.339000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "726e3f98-6e0a-4bfd-9922-3ab1de34f7e1",
+            "2026-06-10T09:37:09.339000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "726e3f98-6e0a-4bfd-9922-3ab1de34f7e1",
+            "2026-06-10T09:37:09.339000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "726e3f98-6e0a-4bfd-9922-3ab1de34f7e1",
+            "2026-06-10T09:37:09.339000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "82a446da-84a3-4cfd-8a2f-7fabc2f1c352",
+            "2026-06-09T11:36:18.766000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "82a446da-84a3-4cfd-8a2f-7fabc2f1c352",
+            "2026-06-09T11:36:18.766000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "82a446da-84a3-4cfd-8a2f-7fabc2f1c352",
+            "2026-06-09T11:36:18.766000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "82a446da-84a3-4cfd-8a2f-7fabc2f1c352",
+            "2026-06-09T11:36:18.766000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8be7f64d-4fc3-4cf7-b98e-d1f0f202d85a",
+            "2026-06-09T16:07:40.048000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8c86b6ca-4234-4f73-912a-e6dc550f33b4",
+            "2026-06-09T00:50:33.444000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "8cb4f9f5-8b70-4b0d-bf86-08f885e28fa8",
+            "2026-06-10T06:10:28.010000",
+            "benchmark_weights",
+            "Benchmark weights loaded",
+            "SUCCESS"
+        ],
+        [
+            "8cb4f9f5-8b70-4b0d-bf86-08f885e28fa8",
+            "2026-06-10T06:10:28.010000",
+            "positions_fx_aladdin",
+            "Aladdin FX position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "985d6bca-af9e-4bed-9497-5bf88a9039f1",
+            "2026-06-09T07:57:41.067000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9dac70c3-0204-478f-9140-415f8770e6d8",
+            "2026-06-09T13:06:38.911000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9dac70c3-0204-478f-9140-415f8770e6d8",
+            "2026-06-09T13:06:38.911000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9dac70c3-0204-478f-9140-415f8770e6d8",
+            "2026-06-09T13:06:38.911000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9dac70c3-0204-478f-9140-415f8770e6d8",
+            "2026-06-09T13:06:38.911000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "9ea9aea9-046a-46fe-b650-5e6276bf9e7a",
+            "2026-06-09T10:38:00.484000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "a0ae8423-10fe-45fe-abd6-bdc1852bf516",
+            "2026-06-10T09:52:19.854000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "a0ae8423-10fe-45fe-abd6-bdc1852bf516",
+            "2026-06-10T09:52:19.854000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "a0ae8423-10fe-45fe-abd6-bdc1852bf516",
+            "2026-06-10T09:52:19.854000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "a0ae8423-10fe-45fe-abd6-bdc1852bf516",
+            "2026-06-10T09:52:19.854000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "a0ae8423-10fe-45fe-abd6-bdc1852bf516",
+            "2026-06-10T09:52:19.854000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ade0448e-b333-4dde-971a-4466f48bf4e1",
+            "2026-06-09T10:08:34.384000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ade0448e-b333-4dde-971a-4466f48bf4e1",
+            "2026-06-09T10:08:34.384000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ade0448e-b333-4dde-971a-4466f48bf4e1",
+            "2026-06-09T10:08:34.384000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ade0448e-b333-4dde-971a-4466f48bf4e1",
+            "2026-06-09T10:08:34.384000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "af3edcdf-b644-4108-9c39-86299a3781af",
+            "2026-06-09T07:50:01.415000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ba39bfb2-a911-4a42-9ed8-bfcae9aed385",
+            "2026-06-09T11:06:38.480000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ba39bfb2-a911-4a42-9ed8-bfcae9aed385",
+            "2026-06-09T11:06:38.480000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ba39bfb2-a911-4a42-9ed8-bfcae9aed385",
+            "2026-06-09T11:06:38.480000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ba39bfb2-a911-4a42-9ed8-bfcae9aed385",
+            "2026-06-09T11:06:38.480000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "be8577fc-7d42-467d-aecc-03a9dc58e06b",
+            "2026-06-09T14:35:59.163000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "be8577fc-7d42-467d-aecc-03a9dc58e06b",
+            "2026-06-09T14:35:59.163000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "be8577fc-7d42-467d-aecc-03a9dc58e06b",
+            "2026-06-09T14:35:59.163000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "be8577fc-7d42-467d-aecc-03a9dc58e06b",
+            "2026-06-09T14:35:59.163000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c1ebd8ab-9d34-4f9e-afb7-7849eb27a43f",
+            "2026-06-09T06:09:39.272000",
+            "benchmark_weights",
+            "Benchmark weights loaded",
+            "SUCCESS"
+        ],
+        [
+            "c1ebd8ab-9d34-4f9e-afb7-7849eb27a43f",
+            "2026-06-09T06:09:39.272000",
+            "positions_fx_aladdin",
+            "Aladdin FX position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "c90ed55d-2d19-4adc-940e-cb781a8f71a3",
+            "2026-06-10T07:10:14.558000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d417db0b-1cf2-4e13-813f-ecc9b9f07432",
+            "2026-06-09T12:07:16.381000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d417db0b-1cf2-4e13-813f-ecc9b9f07432",
+            "2026-06-09T12:07:16.381000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d417db0b-1cf2-4e13-813f-ecc9b9f07432",
+            "2026-06-09T12:07:16.381000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d417db0b-1cf2-4e13-813f-ecc9b9f07432",
+            "2026-06-09T12:07:16.381000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d4898d0e-dc9f-43f7-b042-aa1ff9eb4db6",
+            "2026-06-09T14:06:10.248000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d4898d0e-dc9f-43f7-b042-aa1ff9eb4db6",
+            "2026-06-09T14:06:10.248000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d4898d0e-dc9f-43f7-b042-aa1ff9eb4db6",
+            "2026-06-09T14:06:10.248000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d4898d0e-dc9f-43f7-b042-aa1ff9eb4db6",
+            "2026-06-09T14:06:10.248000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d6d775e5-532b-4e12-ad0e-3d6fdc06784f",
+            "2026-06-09T07:25:05.112000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "d98b7614-c695-414a-95ff-f5428f32bea0",
+            "2026-06-10T09:15:29.594000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e320cefc-4f60-4bc5-b0a5-d4a4438f34ae",
+            "2026-06-10T10:22:01.684000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e320cefc-4f60-4bc5-b0a5-d4a4438f34ae",
+            "2026-06-10T10:22:01.684000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e320cefc-4f60-4bc5-b0a5-d4a4438f34ae",
+            "2026-06-10T10:22:01.684000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e320cefc-4f60-4bc5-b0a5-d4a4438f34ae",
+            "2026-06-10T10:22:01.684000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e320cefc-4f60-4bc5-b0a5-d4a4438f34ae",
+            "2026-06-10T10:22:01.684000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "e6893c90-682d-41ce-8c87-f85a2a2203ff",
+            "2026-06-09T10:08:00.450000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "f168a5d0-1b13-4f38-8693-ed0687233020",
+            "2026-06-09T15:08:01.077000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "fb5f9314-e023-474e-ab6f-5580e4f453c6",
+            "2026-06-09T13:36:19.152000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "fb5f9314-e023-474e-ab6f-5580e4f453c6",
+            "2026-06-09T13:36:19.152000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "fb5f9314-e023-474e-ab6f-5580e4f453c6",
+            "2026-06-09T13:36:19.152000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "fb5f9314-e023-474e-ab6f-5580e4f453c6",
+            "2026-06-09T13:36:19.152000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "calculations",
+            "Rebalancing calculations loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "calculations_trace",
+            "Rebalancing calculations trace loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "cash_forecaster_export_schedule",
+            "Cash forecaster export schedule data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "dsu_board_eee",
+            "DSU BOARD EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "dsu_board_taa",
+            "DSU BOARD TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "dsu_daa",
+            "DSU DAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "dsu_daa_eee",
+            "DSU DAA EEE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "dsu_drift_targets",
+            "DSU DRIFT TARGETS data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "dsu_ic_taa",
+            "DSU IC TAA data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "dsu_runway_range",
+            "DSU RUNWAY RANGE data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "policy_tree",
+            "Policy tree data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "portfolio_group_aladdin",
+            "Aladdin portfolio group data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "positions_aladdin",
+            "Aladdin position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "positions_idm",
+            "IDM positions data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "positions_notional_aladdin",
+            "Aladdin notional position data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "pricing_bloomberg",
+            "Bloomberg data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "trades_aladdin",
+            "Aladdin order data loaded",
+            "SUCCESS"
+        ],
+        [
+            "ff15336b-1a26-4093-afd2-d66a38b96e4f",
+            "2026-06-09T09:07:47.992000",
+            "trades_aladdin",
+            "Trade data loaded",
+            "SUCCESS"
+        ]
+    ],
+    "types": [
+        "str",
+        "datetime64[ns]",
+        "str",
+        "str",
+        "str"
+    ]
+}
